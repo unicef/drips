@@ -1,0 +1,16 @@
+{
+    "metadata": {
+        "master": {
+            "model": "report_metadata.dripsmetadata",
+            "pk": 1,
+            "fields": {
+                "created": "2022-03-01T21:53:27.247Z",
+                "modified": "2022-03-01T21:53:27.247Z",
+                "category": "",
+                "code": "",
+                "description": ""
+            }
+        },
+        "deps": []
+    }
+}

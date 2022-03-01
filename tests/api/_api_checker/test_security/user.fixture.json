@@ -1,0 +1,26 @@
+{
+    "user": {
+        "master": {
+            "model": "unicef_security.user",
+            "pk": 6,
+            "fields": {
+                "password": "password",
+                "last_login": null,
+                "is_superuser": false,
+                "username": "user005",
+                "first_name": "Allen",
+                "last_name": "Kim",
+                "email": "m005@mailinator.com",
+                "is_staff": false,
+                "is_active": true,
+                "date_joined": "2022-03-01T21:53:27.487Z",
+                "azure_id": null,
+                "job_title": null,
+                "display_name": "Allen Kim:",
+                "groups": [],
+                "user_permissions": []
+            }
+        },
+        "deps": []
+    }
+}

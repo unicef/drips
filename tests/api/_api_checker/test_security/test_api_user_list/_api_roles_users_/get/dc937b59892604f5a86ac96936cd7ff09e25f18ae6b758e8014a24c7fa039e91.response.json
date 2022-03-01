@@ -1,0 +1,32 @@
+{
+    "status_code": 200,
+    "headers": {
+        "Content-Type": "application/json",
+        "Vary": "Accept, Origin",
+        "Allow": "GET, POST, HEAD, OPTIONS",
+        "X-Frame-Options": "DENY",
+        "Content-Length": "244",
+        "X-Content-Type-Options": "nosniff",
+        "Referrer-Policy": "same-origin",
+        "Cross-Origin-Opener-Policy": "same-origin"
+    },
+    "data": [
+        {
+            "id": 6,
+            "username": "user005",
+            "first_name": "Allen",
+            "last_name": "Kim",
+            "email": "m005@mailinator.com",
+            "is_superuser": false
+        },
+        {
+            "id": 1,
+            "username": "user999",
+            "first_name": "Victoria",
+            "last_name": "King",
+            "email": "m000@mailinator.com",
+            "is_superuser": true
+        }
+    ],
+    "content_type": "application/json"
+}

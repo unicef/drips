@@ -12,15 +12,15 @@ Links
 +--------------------+----------------+--------------+--------------------+
 | Source Code        |https://github.com/unicef/drips                     |
 +--------------------+----------------+-----------------------------------+
-| Issue tracker      |https://app.clubhouse.io/stories                    |
+| Issue tracker      |https://unicef.visualstudio.com/SCS-Drips/          |
 +--------------------+----------------+-----------------------------------+
 
 
-.. |master-cov| image:: https://circleci.com/gh/unicef/etools/tree/master.svg?style=svg
+.. |master-cov| image:: https://circleci.com/gh/unicef/drips/tree/master.svg?style=svg
                     :target: https://circleci.com/gh/unicef/aaa/tree/master
 
 
-.. |dev-cov| image:: https://circleci.com/gh/unicef/etools/tree/develop.svg?style=svg
+.. |dev-cov| image:: https://circleci.com/gh/unicef/drips/tree/develop.svg?style=svg
                     :target: https://circleci.com/gh/unicef/aaa/tree/develop
 
 

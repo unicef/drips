@@ -1,0 +1,398 @@
+[
+{
+    "model": "report_metadata.dripsmetadata",
+    "pk": 2,
+    "fields": {
+        "created": "2022-03-01T21:45:59.166Z",
+        "modified": "2022-03-01T21:45:59.166Z",
+        "category": "Document Type",
+        "code": "bap_document",
+        "description": "BAP Document"
+    }
+},
+{
+    "model": "report_metadata.dripsmetadata",
+    "pk": 3,
+    "fields": {
+        "created": "2022-03-01T21:45:59.190Z",
+        "modified": "2022-03-01T21:45:59.190Z",
+        "category": "Document Type",
+        "code": "prc_documents",
+        "description": "PRC Documents"
+    }
+},
+{
+    "model": "report_metadata.dripsmetadata",
+    "pk": 4,
+    "fields": {
+        "created": "2022-03-01T21:45:59.190Z",
+        "modified": "2022-03-01T21:45:59.190Z",
+        "category": "Document Type",
+        "code": "correspondence_with_ip",
+        "description": "Correspondence with IP"
+    }
+},
+{
+    "model": "report_metadata.dripsmetadata",
+    "pk": 5,
+    "fields": {
+        "created": "2022-03-01T21:45:59.191Z",
+        "modified": "2022-03-01T21:45:59.191Z",
+        "category": "Document Type",
+        "code": "internal_correspondence",
+        "description": "Internal Correspondence"
+    }
+},
+{
+    "model": "report_metadata.dripsmetadata",
+    "pk": 6,
+    "fields": {
+        "created": "2022-03-01T21:45:59.192Z",
+        "modified": "2022-03-01T21:45:59.192Z",
+        "category": "Document Type",
+        "code": "submitted_face_form",
+        "description": "Submitted FACE Form"
+    }
+},
+{
+    "model": "report_metadata.dripsmetadata",
+    "pk": 7,
+    "fields": {
+        "created": "2022-03-01T21:45:59.193Z",
+        "modified": "2022-03-01T21:45:59.193Z",
+        "category": "Document Type",
+        "code": "approved_face_form",
+        "description": "Approved FACE Form"
+    }
+},
+{
+    "model": "report_metadata.dripsmetadata",
+    "pk": 8,
+    "fields": {
+        "created": "2022-03-01T21:45:59.194Z",
+        "modified": "2022-03-01T21:45:59.194Z",
+        "category": "Document Type",
+        "code": "ice",
+        "description": "ICE"
+    }
+},
+{
+    "model": "report_metadata.dripsmetadata",
+    "pk": 9,
+    "fields": {
+        "created": "2022-03-01T21:45:59.196Z",
+        "modified": "2022-03-01T21:45:59.196Z",
+        "category": "Document Type",
+        "code": "impairment",
+        "description": "Impairment"
+    }
+},
+{
+    "model": "report_metadata.dripsmetadata",
+    "pk": 10,
+    "fields": {
+        "created": "2022-03-01T21:45:59.197Z",
+        "modified": "2022-03-01T21:45:59.197Z",
+        "category": "Document Type",
+        "code": "write_off",
+        "description": "Write Off"
+    }
+},
+{
+    "model": "report_metadata.dripsmetadata",
+    "pk": 11,
+    "fields": {
+        "created": "2022-03-01T21:45:59.198Z",
+        "modified": "2022-03-01T21:45:59.198Z",
+        "category": "Document Type",
+        "code": "reports",
+        "description": "Reports"
+    }
+},
+{
+    "model": "report_metadata.dripsmetadata",
+    "pk": 12,
+    "fields": {
+        "created": "2022-03-01T21:45:59.204Z",
+        "modified": "2022-03-01T21:45:59.204Z",
+        "category": "Document Type",
+        "code": "note_for_the_record",
+        "description": "Note for the Record"
+    }
+},
+{
+    "model": "report_metadata.dripsmetadata",
+    "pk": 13,
+    "fields": {
+        "created": "2022-03-01T21:45:59.205Z",
+        "modified": "2022-03-01T21:45:59.205Z",
+        "category": "IP Type",
+        "code": "bilateral_/_multilateral",
+        "description": "Bilateral / Multilateral"
+    }
+},
+{
+    "model": "report_metadata.dripsmetadata",
+    "pk": 14,
+    "fields": {
+        "created": "2022-03-01T21:45:59.206Z",
+        "modified": "2022-03-01T21:45:59.206Z",
+        "category": "IP Type",
+        "code": "civil_society_organization",
+        "description": "Civil Society Organization"
+    }
+},
+{
+    "model": "report_metadata.dripsmetadata",
+    "pk": 15,
+    "fields": {
+        "created": "2022-03-01T21:45:59.206Z",
+        "modified": "2022-03-01T21:45:59.206Z",
+        "category": "IP Type",
+        "code": "government",
+        "description": "Government"
+    }
+},
+{
+    "model": "report_metadata.dripsmetadata",
+    "pk": 16,
+    "fields": {
+        "created": "2022-03-01T21:45:59.207Z",
+        "modified": "2022-03-01T21:45:59.207Z",
+        "category": "IP Type",
+        "code": "un_agency",
+        "description": "UN Agency"
+    }
+},
+{
+    "model": "report_metadata.dripsmetadata",
+    "pk": 17,
+    "fields": {
+        "created": "2022-03-01T21:45:59.208Z",
+        "modified": "2022-03-01T21:45:59.208Z",
+        "category": "Uploading App",
+        "code": "bap_app",
+        "description": "BAP App"
+    }
+},
+{
+    "model": "report_metadata.dripsmetadata",
+    "pk": 18,
+    "fields": {
+        "created": "2022-03-01T21:45:59.209Z",
+        "modified": "2022-03-01T21:45:59.209Z",
+        "category": "Uploading App",
+        "code": "face_form_app",
+        "description": "FACE Form App"
+    }
+},
+{
+    "model": "report_metadata.dripsmetadata",
+    "pk": 19,
+    "fields": {
+        "created": "2022-03-01T21:45:59.211Z",
+        "modified": "2022-03-01T21:45:59.211Z",
+        "category": "Uploading App",
+        "code": "hact_transactions_app",
+        "description": "HACT Transactions App"
+    }
+},
+{
+    "model": "report_metadata.dripsmetadata",
+    "pk": 20,
+    "fields": {
+        "created": "2022-03-01T21:45:59.212Z",
+        "modified": "2022-03-01T21:45:59.212Z",
+        "category": "Uploading App",
+        "code": "partner_summary",
+        "description": "Partner Summary"
+    }
+},
+{
+    "model": "report_metadata.dripsmetadata",
+    "pk": 21,
+    "fields": {
+        "created": "2022-03-01T21:45:59.213Z",
+        "modified": "2022-03-01T21:45:59.213Z",
+        "category": "CSO Type",
+        "code": "international_ngo",
+        "description": "International NGO"
+    }
+},
+{
+    "model": "report_metadata.dripsmetadata",
+    "pk": 22,
+    "fields": {
+        "created": "2022-03-01T21:45:59.215Z",
+        "modified": "2022-03-01T21:45:59.215Z",
+        "category": "CSO Type",
+        "code": "national_ngo",
+        "description": "National NGO"
+    }
+},
+{
+    "model": "report_metadata.dripsmetadata",
+    "pk": 23,
+    "fields": {
+        "created": "2022-03-01T21:45:59.216Z",
+        "modified": "2022-03-01T21:45:59.216Z",
+        "category": "CSO Type",
+        "code": "community_based_organization",
+        "description": "Community Based Organization"
+    }
+},
+{
+    "model": "report_metadata.dripsmetadata",
+    "pk": 24,
+    "fields": {
+        "created": "2022-03-01T21:45:59.217Z",
+        "modified": "2022-03-01T21:45:59.217Z",
+        "category": "CSO Type",
+        "code": "academic_institution",
+        "description": "Academic Institution"
+    }
+},
+{
+    "model": "report_metadata.dripsmetadata",
+    "pk": 25,
+    "fields": {
+        "created": "2022-03-01T21:45:59.219Z",
+        "modified": "2022-03-01T21:45:59.219Z",
+        "category": "CSO Type",
+        "code": "red_cross/red_cresent_national_society",
+        "description": "Red Cross/Red Cresent National Society"
+    }
+},
+{
+    "model": "report_metadata.dripsmetadata",
+    "pk": 26,
+    "fields": {
+        "created": "2022-03-01T21:45:59.220Z",
+        "modified": "2022-03-01T21:45:59.220Z",
+        "category": "FACE Type",
+        "code": "direct_cash_transfer",
+        "description": "Direct Cash Transfer"
+    }
+},
+{
+    "model": "report_metadata.dripsmetadata",
+    "pk": 27,
+    "fields": {
+        "created": "2022-03-01T21:45:59.222Z",
+        "modified": "2022-03-01T21:45:59.222Z",
+        "category": "FACE Type",
+        "code": "reimbursement",
+        "description": "Reimbursement"
+    }
+},
+{
+    "model": "report_metadata.dripsmetadata",
+    "pk": 28,
+    "fields": {
+        "created": "2022-03-01T21:45:59.223Z",
+        "modified": "2022-03-01T21:45:59.223Z",
+        "category": "FACE Type",
+        "code": "direct_payment",
+        "description": "Direct Payment"
+    }
+},
+{
+    "model": "report_metadata.dripsmetadata",
+    "pk": 29,
+    "fields": {
+        "created": "2022-03-01T21:45:59.225Z",
+        "modified": "2022-03-01T21:45:59.225Z",
+        "category": "Risk Rating",
+        "code": "not_required",
+        "description": "Not Required"
+    }
+},
+{
+    "model": "report_metadata.dripsmetadata",
+    "pk": 30,
+    "fields": {
+        "created": "2022-03-01T21:45:59.226Z",
+        "modified": "2022-03-01T21:45:59.226Z",
+        "category": "Risk Rating",
+        "code": "low",
+        "description": "Low"
+    }
+},
+{
+    "model": "report_metadata.dripsmetadata",
+    "pk": 31,
+    "fields": {
+        "created": "2022-03-01T21:45:59.227Z",
+        "modified": "2022-03-01T21:45:59.227Z",
+        "category": "Risk Rating",
+        "code": "medium",
+        "description": "Medium"
+    }
+},
+{
+    "model": "report_metadata.dripsmetadata",
+    "pk": 32,
+    "fields": {
+        "created": "2022-03-01T21:45:59.228Z",
+        "modified": "2022-03-01T21:45:59.228Z",
+        "category": "Risk Rating",
+        "code": "significant",
+        "description": "Significant"
+    }
+},
+{
+    "model": "report_metadata.dripsmetadata",
+    "pk": 33,
+    "fields": {
+        "created": "2022-03-01T21:45:59.230Z",
+        "modified": "2022-03-01T21:45:59.230Z",
+        "category": "Risk Rating",
+        "code": "high",
+        "description": "High"
+    }
+},
+{
+    "model": "report_metadata.dripsmetadata",
+    "pk": 34,
+    "fields": {
+        "created": "2022-03-01T21:45:59.231Z",
+        "modified": "2022-03-01T21:45:59.231Z",
+        "category": "BAP Document Type",
+        "code": "programme_document",
+        "description": "Programme Document"
+    }
+},
+{
+    "model": "report_metadata.dripsmetadata",
+    "pk": 35,
+    "fields": {
+        "created": "2022-03-01T21:45:59.232Z",
+        "modified": "2022-03-01T21:45:59.232Z",
+        "category": "BAP Document Type",
+        "code": "small_scale_funding_agreement",
+        "description": "Small Scale Funding Agreement"
+    }
+},
+{
+    "model": "report_metadata.dripsmetadata",
+    "pk": 36,
+    "fields": {
+        "created": "2022-03-01T21:45:59.244Z",
+        "modified": "2022-03-01T21:45:59.244Z",
+        "category": "BAP Document Type",
+        "code": "memorandum_of_understanding",
+        "description": "Memorandum of Understanding"
+    }
+},
+{
+    "model": "report_metadata.dripsmetadata",
+    "pk": 37,
+    "fields": {
+        "created": "2022-03-01T21:45:59.245Z",
+        "modified": "2022-03-01T21:45:59.245Z",
+        "category": "BAP Document Type",
+        "code": "micro_plans",
+        "description": "Micro Plans"
+    }
+}
+]
