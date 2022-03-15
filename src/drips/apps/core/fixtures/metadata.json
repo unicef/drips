@@ -357,7 +357,7 @@
     "fields": {
         "created": "2022-03-01T21:45:59.231Z",
         "modified": "2022-03-01T21:45:59.231Z",
-        "category": "BAP document_type",
+        "category": "bap_document_type",
         "code": "programme_document",
         "description": "Programme Document"
     }
@@ -368,7 +368,7 @@
     "fields": {
         "created": "2022-03-01T21:45:59.232Z",
         "modified": "2022-03-01T21:45:59.232Z",
-        "category": "BAP document_type",
+        "category": "bap_document_type",
         "code": "small_scale_funding_agreement",
         "description": "Small Scale Funding Agreement"
     }
@@ -379,7 +379,7 @@
     "fields": {
         "created": "2022-03-01T21:45:59.244Z",
         "modified": "2022-03-01T21:45:59.244Z",
-        "category": "BAP document_type",
+        "category": "bap_document_type",
         "code": "memorandum_of_understanding",
         "description": "Memorandum of Understanding"
     }
@@ -390,7 +390,7 @@
     "fields": {
         "created": "2022-03-01T21:45:59.245Z",
         "modified": "2022-03-01T21:45:59.245Z",
-        "category": "BAP document_type",
+        "category": "bap_document_type",
         "code": "micro_plans",
         "description": "Micro Plans"
     }
