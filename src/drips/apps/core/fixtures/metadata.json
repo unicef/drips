@@ -5,7 +5,7 @@
     "fields": {
         "created": "2022-03-01T21:45:59.166Z",
         "modified": "2022-03-01T21:45:59.166Z",
-        "category": "Document Type",
+        "category": "document_type",
         "code": "bap_document",
         "description": "BAP Document"
     }
@@ -16,7 +16,7 @@
     "fields": {
         "created": "2022-03-01T21:45:59.190Z",
         "modified": "2022-03-01T21:45:59.190Z",
-        "category": "Document Type",
+        "category": "document_type",
         "code": "prc_documents",
         "description": "PRC Documents"
     }
@@ -27,7 +27,7 @@
     "fields": {
         "created": "2022-03-01T21:45:59.190Z",
         "modified": "2022-03-01T21:45:59.190Z",
-        "category": "Document Type",
+        "category": "document_type",
         "code": "correspondence_with_ip",
         "description": "Correspondence with IP"
     }
@@ -38,7 +38,7 @@
     "fields": {
         "created": "2022-03-01T21:45:59.191Z",
         "modified": "2022-03-01T21:45:59.191Z",
-        "category": "Document Type",
+        "category": "document_type",
         "code": "internal_correspondence",
         "description": "Internal Correspondence"
     }
@@ -49,7 +49,7 @@
     "fields": {
         "created": "2022-03-01T21:45:59.192Z",
         "modified": "2022-03-01T21:45:59.192Z",
-        "category": "Document Type",
+        "category": "document_type",
         "code": "submitted_face_form",
         "description": "Submitted FACE Form"
     }
@@ -60,7 +60,7 @@
     "fields": {
         "created": "2022-03-01T21:45:59.193Z",
         "modified": "2022-03-01T21:45:59.193Z",
-        "category": "Document Type",
+        "category": "document_type",
         "code": "approved_face_form",
         "description": "Approved FACE Form"
     }
@@ -71,7 +71,7 @@
     "fields": {
         "created": "2022-03-01T21:45:59.194Z",
         "modified": "2022-03-01T21:45:59.194Z",
-        "category": "Document Type",
+        "category": "document_type",
         "code": "ice",
         "description": "ICE"
     }
@@ -82,7 +82,7 @@
     "fields": {
         "created": "2022-03-01T21:45:59.196Z",
         "modified": "2022-03-01T21:45:59.196Z",
-        "category": "Document Type",
+        "category": "document_type",
         "code": "impairment",
         "description": "Impairment"
     }
@@ -93,7 +93,7 @@
     "fields": {
         "created": "2022-03-01T21:45:59.197Z",
         "modified": "2022-03-01T21:45:59.197Z",
-        "category": "Document Type",
+        "category": "document_type",
         "code": "write_off",
         "description": "Write Off"
     }
@@ -104,7 +104,7 @@
     "fields": {
         "created": "2022-03-01T21:45:59.198Z",
         "modified": "2022-03-01T21:45:59.198Z",
-        "category": "Document Type",
+        "category": "document_type",
         "code": "reports",
         "description": "Reports"
     }
@@ -115,7 +115,7 @@
     "fields": {
         "created": "2022-03-01T21:45:59.204Z",
         "modified": "2022-03-01T21:45:59.204Z",
-        "category": "Document Type",
+        "category": "document_type",
         "code": "note_for_the_record",
         "description": "Note for the Record"
     }
@@ -126,7 +126,7 @@
     "fields": {
         "created": "2022-03-01T21:45:59.205Z",
         "modified": "2022-03-01T21:45:59.205Z",
-        "category": "IP Type",
+        "category": "ip_type",
         "code": "bilateral_/_multilateral",
         "description": "Bilateral / Multilateral"
     }
@@ -137,7 +137,7 @@
     "fields": {
         "created": "2022-03-01T21:45:59.206Z",
         "modified": "2022-03-01T21:45:59.206Z",
-        "category": "IP Type",
+        "category": "ip_type",
         "code": "civil_society_organization",
         "description": "Civil Society Organization"
     }
@@ -148,7 +148,7 @@
     "fields": {
         "created": "2022-03-01T21:45:59.206Z",
         "modified": "2022-03-01T21:45:59.206Z",
-        "category": "IP Type",
+        "category": "ip_type",
         "code": "government",
         "description": "Government"
     }
@@ -159,7 +159,7 @@
     "fields": {
         "created": "2022-03-01T21:45:59.207Z",
         "modified": "2022-03-01T21:45:59.207Z",
-        "category": "IP Type",
+        "category": "ip_type",
         "code": "un_agency",
         "description": "UN Agency"
     }
@@ -170,7 +170,7 @@
     "fields": {
         "created": "2022-03-01T21:45:59.208Z",
         "modified": "2022-03-01T21:45:59.208Z",
-        "category": "Uploading App",
+        "category": "uploading_app",
         "code": "bap_app",
         "description": "BAP App"
     }
@@ -181,7 +181,7 @@
     "fields": {
         "created": "2022-03-01T21:45:59.209Z",
         "modified": "2022-03-01T21:45:59.209Z",
-        "category": "Uploading App",
+        "category": "uploading_app",
         "code": "face_form_app",
         "description": "FACE Form App"
     }
@@ -192,7 +192,7 @@
     "fields": {
         "created": "2022-03-01T21:45:59.211Z",
         "modified": "2022-03-01T21:45:59.211Z",
-        "category": "Uploading App",
+        "category": "uploading_app",
         "code": "hact_transactions_app",
         "description": "HACT Transactions App"
     }
@@ -203,7 +203,7 @@
     "fields": {
         "created": "2022-03-01T21:45:59.212Z",
         "modified": "2022-03-01T21:45:59.212Z",
-        "category": "Uploading App",
+        "category": "uploading_app",
         "code": "partner_summary",
         "description": "Partner Summary"
     }
@@ -214,7 +214,7 @@
     "fields": {
         "created": "2022-03-01T21:45:59.213Z",
         "modified": "2022-03-01T21:45:59.213Z",
-        "category": "CSO Type",
+        "category": "cso_type",
         "code": "international_ngo",
         "description": "International NGO"
     }
@@ -225,7 +225,7 @@
     "fields": {
         "created": "2022-03-01T21:45:59.215Z",
         "modified": "2022-03-01T21:45:59.215Z",
-        "category": "CSO Type",
+        "category": "cso_type",
         "code": "national_ngo",
         "description": "National NGO"
     }
@@ -236,7 +236,7 @@
     "fields": {
         "created": "2022-03-01T21:45:59.216Z",
         "modified": "2022-03-01T21:45:59.216Z",
-        "category": "CSO Type",
+        "category": "cso_type",
         "code": "community_based_organization",
         "description": "Community Based Organization"
     }
@@ -247,7 +247,7 @@
     "fields": {
         "created": "2022-03-01T21:45:59.217Z",
         "modified": "2022-03-01T21:45:59.217Z",
-        "category": "CSO Type",
+        "category": "cso_type",
         "code": "academic_institution",
         "description": "Academic Institution"
     }
@@ -258,7 +258,7 @@
     "fields": {
         "created": "2022-03-01T21:45:59.219Z",
         "modified": "2022-03-01T21:45:59.219Z",
-        "category": "CSO Type",
+        "category": "cso_type",
         "code": "red_cross/red_cresent_national_society",
         "description": "Red Cross/Red Cresent National Society"
     }
@@ -269,7 +269,7 @@
     "fields": {
         "created": "2022-03-01T21:45:59.220Z",
         "modified": "2022-03-01T21:45:59.220Z",
-        "category": "FACE Type",
+        "category": "face_type",
         "code": "direct_cash_transfer",
         "description": "Direct Cash Transfer"
     }
@@ -280,7 +280,7 @@
     "fields": {
         "created": "2022-03-01T21:45:59.222Z",
         "modified": "2022-03-01T21:45:59.222Z",
-        "category": "FACE Type",
+        "category": "face_type",
         "code": "reimbursement",
         "description": "Reimbursement"
     }
@@ -291,7 +291,7 @@
     "fields": {
         "created": "2022-03-01T21:45:59.223Z",
         "modified": "2022-03-01T21:45:59.223Z",
-        "category": "FACE Type",
+        "category": "face_type",
         "code": "direct_payment",
         "description": "Direct Payment"
     }
@@ -302,7 +302,7 @@
     "fields": {
         "created": "2022-03-01T21:45:59.225Z",
         "modified": "2022-03-01T21:45:59.225Z",
-        "category": "Risk Rating",
+        "category": "risk_rating",
         "code": "not_required",
         "description": "Not Required"
     }
@@ -313,7 +313,7 @@
     "fields": {
         "created": "2022-03-01T21:45:59.226Z",
         "modified": "2022-03-01T21:45:59.226Z",
-        "category": "Risk Rating",
+        "category": "risk_rating",
         "code": "low",
         "description": "Low"
     }
@@ -324,7 +324,7 @@
     "fields": {
         "created": "2022-03-01T21:45:59.227Z",
         "modified": "2022-03-01T21:45:59.227Z",
-        "category": "Risk Rating",
+        "category": "risk_rating",
         "code": "medium",
         "description": "Medium"
     }
@@ -335,7 +335,7 @@
     "fields": {
         "created": "2022-03-01T21:45:59.228Z",
         "modified": "2022-03-01T21:45:59.228Z",
-        "category": "Risk Rating",
+        "category": "risk_rating",
         "code": "significant",
         "description": "Significant"
     }
@@ -346,7 +346,7 @@
     "fields": {
         "created": "2022-03-01T21:45:59.230Z",
         "modified": "2022-03-01T21:45:59.230Z",
-        "category": "Risk Rating",
+        "category": "risk_rating",
         "code": "high",
         "description": "High"
     }
@@ -357,7 +357,7 @@
     "fields": {
         "created": "2022-03-01T21:45:59.231Z",
         "modified": "2022-03-01T21:45:59.231Z",
-        "category": "BAP Document Type",
+        "category": "BAP document_type",
         "code": "programme_document",
         "description": "Programme Document"
     }
@@ -368,7 +368,7 @@
     "fields": {
         "created": "2022-03-01T21:45:59.232Z",
         "modified": "2022-03-01T21:45:59.232Z",
-        "category": "BAP Document Type",
+        "category": "BAP document_type",
         "code": "small_scale_funding_agreement",
         "description": "Small Scale Funding Agreement"
     }
@@ -379,7 +379,7 @@
     "fields": {
         "created": "2022-03-01T21:45:59.244Z",
         "modified": "2022-03-01T21:45:59.244Z",
-        "category": "BAP Document Type",
+        "category": "BAP document_type",
         "code": "memorandum_of_understanding",
         "description": "Memorandum of Understanding"
     }
@@ -390,7 +390,7 @@
     "fields": {
         "created": "2022-03-01T21:45:59.245Z",
         "modified": "2022-03-01T21:45:59.245Z",
-        "category": "BAP Document Type",
+        "category": "BAP document_type",
         "code": "micro_plans",
         "description": "Micro Plans"
     }
