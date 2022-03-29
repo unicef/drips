@@ -1,0 +1,20 @@
+{
+    "status_code": 200,
+    "headers": {
+        "Content-Type": "application/json",
+        "Vary": "Accept, Origin",
+        "Allow": "GET",
+        "X-Frame-Options": "DENY",
+        "Content-Length": "130",
+        "X-Content-Type-Options": "nosniff",
+        "Referrer-Policy": "same-origin"
+    },
+    "data": {
+        "tracker": {
+            "site_tracker": "https://unisitetracker.unicef.io/",
+            "site_id": null
+        },
+        "source_id": "51b10aef-9d0e-452b-8588-6a899a25c251"
+    },
+    "content_type": "application/json"
+}

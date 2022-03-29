@@ -89,7 +89,7 @@ ALLOWED_HOSTS = (
 
 LOGIN_URL = '/login/'
 LOGIN_REDIRECT_URL = '/'
-LOGOUT_URL = '/accounts/logout'
+LOGOUT_URL = '/drips/accounts/logout'
 LOGOUT_REDIRECT_URL = '/landing/'
 
 # TIME_ZONE = env('TIME_ZONE')

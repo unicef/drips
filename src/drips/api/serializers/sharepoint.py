@@ -5,11 +5,9 @@ from django.conf import settings
 from dateutil.parser import parse
 from rest_framework import serializers
 from rest_framework.reverse import reverse
-from sharepoint_rest_api.serializers.fields import (
-    CapitalizeSearchSharePointField,
-)
+from sharepoint_rest_api.serializers.fields import CapitalizeSearchSharePointField
 
-from drips.api.serializers.fields import DRIPSSearchMultiSharePointField, DRIPSSearchSharePointField
+from drips.api.serializers.fields import DRIPSSearchSharePointField
 from drips.api.serializers.utils import getvalue
 
 
@@ -22,20 +20,25 @@ class DRIPSSharePointSearchSerializer(serializers.Serializer):
     modified = DRIPSSearchSharePointField()
     business_area = DRIPSSearchSharePointField()
     ip_type = DRIPSSearchSharePointField()
+    implementing_partner_name = DRIPSSearchSharePointField()
     cso_type = DRIPSSearchSharePointField()
-    office = DRIPSSearchMultiSharePointField()
+    responsible_office = DRIPSSearchSharePointField()
+    partner_risk_rating = DRIPSSearchSharePointField()
+    implementing_partner_code = DRIPSSearchSharePointField()
+    fund_reservation_no = DRIPSSearchSharePointField()
+    funds_commitment_no = DRIPSSearchSharePointField()
 
-    risk_rating = DRIPSSearchSharePointField()
-    ip_number = DRIPSSearchSharePointField()
-    bap_document_no = DRIPSSearchSharePointField()
-    bap_document_type = DRIPSSearchSharePointField()
-    document_type = DRIPSSearchSharePointField()
-    face_type = DRIPSSearchSharePointField()
-    face_no = DRIPSSearchSharePointField()
-    programme_officer = DRIPSSearchSharePointField()
-    face_date = DRIPSSearchSharePointField()
-    head_of_office = DRIPSSearchSharePointField()
-    uploading_app = DRIPSSearchSharePointField()
+    b_a_p_document_no = DRIPSSearchSharePointField()
+    b_a_p_document_type = DRIPSSearchSharePointField()
+    attachment_type = DRIPSSearchSharePointField()
+    face_form_type = DRIPSSearchSharePointField()
+    face_form_no = DRIPSSearchSharePointField()
+    responsible_person = DRIPSSearchSharePointField()
+    f_a_c_e_form_date = DRIPSSearchSharePointField()
+    ho_o_approval = DRIPSSearchSharePointField()
+
+    h_a_c_t_transaction_no = DRIPSSearchSharePointField()
+    documentuploaded_app = DRIPSSearchSharePointField()
 
     is_new = serializers.SerializerMethodField()
     download_url = serializers.SerializerMethodField()
