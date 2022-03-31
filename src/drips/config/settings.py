@@ -23,6 +23,7 @@ INSTALLED_APPS = (
     'drips.apps.report_metadata',
     'drips.web',
     'sharepoint_rest_api',
+    'unicef_auth',
     'unicef_security',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -42,6 +43,7 @@ INSTALLED_APPS = (
     'corsheaders',
     'social_django',
     'admin_extra_urls',
+    'admin_extra_buttons',
     'adminactions',
     'rest_framework_social_oauth2',
     'unicef_vision.vision',
@@ -50,7 +52,7 @@ INSTALLED_APPS = (
 )
 
 MIDDLEWARE = (
-    'unicef_security.middleware.HealthCheckMiddleware',
+    # 'djangolib.middleware.HealthCheckMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
@@ -59,11 +61,11 @@ MIDDLEWARE = (
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'corsheaders.middleware.CorsMiddleware',
-    'unicef_security.middleware.UNICEFSocialAuthExceptionMiddleware'
+    'unicef_auth.middleware.UNICEFSocialAuthExceptionMiddleware'
 )
 
 AUTHENTICATION_BACKENDS = (
-    'unicef_security.backends.UNICEFAzureADB2COAuth2',
+    'unicef_auth.backends.UNICEFAzureADB2COAuth2',
     'django.contrib.auth.backends.ModelBackend',
 )
 
@@ -172,7 +174,7 @@ LOGGING = {
     },
 }
 
-AUTH_USER_MODEL = 'unicef_security.User'
+AUTH_USER_MODEL = 'core.User'
 
 HOST = env('HOST', default='http://localhost:8000')
 
@@ -287,14 +289,14 @@ SOCIAL_PASSWORD_RESET_POLICY = env('AZURE_B2C_PASS_RESET_POLICY', default='B2C_1
 SOCIAL_AUTH_USER_MODEL = 'unicef_security.User'
 
 SOCIAL_AUTH_PIPELINE = (
-    'unicef_security.pipeline.social_details',
+    'unicef_auth.pipeline.social_details',
     'social_core.pipeline.social_auth.social_uid',
     'social_core.pipeline.social_auth.auth_allowed',
     'social_core.pipeline.social_auth.social_user',
     'social_core.pipeline.user.get_username',
-    'unicef_security.pipeline.get_username',
+    'unicef_auth.pipeline.get_username',
     'social_core.pipeline.social_auth.associate_by_email',
-    'unicef_security.pipeline.create_unicef_user',
+    'unicef_auth.pipeline.create_unicef_user',
     'social_core.pipeline.social_auth.associate_user',
     'social_core.pipeline.social_auth.load_extra_data',
     'social_core.pipeline.user.user_details',

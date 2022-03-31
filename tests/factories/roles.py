@@ -1,15 +1,16 @@
 from django.db.models import signals
 
 import factory
-import unicef_security
 from factory import SubFactory
 from unicef_security.models import BusinessArea, Region
+
+from drips.apps.core.models import User
 
 
 @factory.django.mute_signals(signals.post_save)
 class UserFactory(factory.django.DjangoModelFactory):
     class Meta:
-        model = unicef_security.models.User
+        model = User
         django_get_or_create = ('username',)
 
     username = factory.Sequence(lambda n: "user%03d" % n)

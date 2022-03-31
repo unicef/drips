@@ -2,11 +2,12 @@ from rest_framework import viewsets
 from rest_framework.decorators import action
 from rest_framework.permissions import IsAuthenticated
 from rest_framework.response import Response
-from unicef_security.models import BusinessArea, User
+from unicef_security.models import BusinessArea
 
 from drips.api.filters import BusinessAreaFilter, UserFilter
 from drips.api.serializers.userrole import BusinessAreaSerializer, UserSerializer
 from drips.api.views.base import GenericAbstractViewSetMixin
+from drips.apps.core.models import User
 
 
 class UserViewSet(GenericAbstractViewSetMixin, viewsets.ModelViewSet):
