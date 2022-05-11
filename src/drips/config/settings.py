@@ -22,8 +22,10 @@ INSTALLED_APPS = (
     'drips.apps.core',
     'drips.apps.report_metadata',
     'drips.web',
+    'constance',
     'sharepoint_rest_api',
     'unicef_security',
+    'unicef_realm',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
@@ -41,7 +43,7 @@ INSTALLED_APPS = (
     'djcelery_email',
     'corsheaders',
     'social_django',
-    'admin_extra_urls',
+    'admin_extra_buttons',
     'adminactions',
     'rest_framework_social_oauth2',
     'unicef_vision.vision',
@@ -50,7 +52,7 @@ INSTALLED_APPS = (
 )
 
 MIDDLEWARE = (
-    'unicef_security.middleware.HealthCheckMiddleware',
+    # 'unicef_security.middleware.HealthCheckMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
@@ -232,6 +234,10 @@ if SENTRY_DSN:  # pragma: no cover
         integrations=[DjangoIntegration(), CeleryIntegration()],
     )
 
+CONSTANCE_CONFIG = {
+    'DEFAULT_GROUP': ('', 'drips'),
+}
+
 if DEBUG:  # pragma: no cover
 
     INSTALLED_APPS += (  # noqa
@@ -250,8 +256,7 @@ INSIGHT_LOGGER_MODEL = 'vision.VisionLog'
 
 INSIGHT_SUB_KEY = env.str('INSIGHT_SUB_KEY', 'invalid_vision_password')
 
-BUSINESSAREA_MODEL = 'unicef_security.BusinessArea'
-
+REALM_TARGET_MODEL = 'unicef_realm.BusinessArea'
 
 SHELL_PLUS_PRE_IMPORTS = (
     ('drips.config', 'celery'),

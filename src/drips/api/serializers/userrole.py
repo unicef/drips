@@ -1,7 +1,7 @@
 from django.contrib.auth import get_user_model
 
 from rest_framework import serializers
-from unicef_security.models import BusinessArea
+from unicef_realm.models import BusinessArea
 
 
 class UserSerializer(serializers.ModelSerializer):

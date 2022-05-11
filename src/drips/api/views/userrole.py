@@ -2,7 +2,8 @@ from rest_framework import viewsets
 from rest_framework.decorators import action
 from rest_framework.permissions import IsAuthenticated
 from rest_framework.response import Response
-from unicef_security.models import BusinessArea, User
+from unicef_realm.models import BusinessArea
+from unicef_security.models import User
 
 from drips.api.filters import BusinessAreaFilter, UserFilter
 from drips.api.serializers.userrole import BusinessAreaSerializer, UserSerializer

@@ -3,7 +3,7 @@ from django.db.models import signals
 import factory
 import unicef_security
 from factory import SubFactory
-from unicef_security.models import BusinessArea, Region
+from unicef_realm.models import BusinessArea, Region
 
 
 @factory.django.mute_signals(signals.post_save)
