@@ -65,7 +65,7 @@ MIDDLEWARE = (
 )
 
 AUTHENTICATION_BACKENDS = (
-    'unicef_security.backends.UNICEFAzureADB2COAuth2',
+    'unicef_security.backends.UNICEFAzureADTenantOAuth2Ext',
     'django.contrib.auth.backends.ModelBackend',
 )
 
@@ -278,11 +278,11 @@ EMAIL_PORT = env('EMAIL_PORT', default=25)
 EMAIL_USE_TLS = env('EMAIL_USE_TLS', default=False)
 EMAIL_USE_SSL = env('EMAIL_USE_SSL', default=False)
 
-KEY = env('AZURE_B2C_CLIENT_ID', default=None)
-SECRET = env('AZURE_B2C_CLIENT_SECRET', default=None)
-TENANT_NAME = env('TENANT_NAME', default='unicefpartners')
-TENANT_ID = f'{TENANT_NAME}.onmicrosoft.com'
-TENANT_B2C_URL = f'{TENANT_NAME}.b2clogin.com'
+SOCIAL_AUTH_AZUREAD_TENANT_OAUTH2_KEY = env.str('AZURE_CLIENT_ID')
+SOCIAL_AUTH_AZUREAD_TENANT_OAUTH2_SECRET = env.str('AZURE_CLIENT_SECRET')
+SOCIAL_AUTH_AZUREAD_TENANT_OAUTH2_TENANT_ID = env.str('AZURE_TENANT')
+SOCIAL_AUTH_AZUREAD_OAUTH2_KEY = env.str('AZURE_CLIENT_ID')
+SOCIAL_AUTH_AZUREAD_OAUTH2_RESOURCE = 'https://graph.microsoft.com/'
 
 SOCIAL_AUTH_URL_NAMESPACE = 'social'
 SOCIAL_AUTH_SANITIZE_REDIRECTS = False
@@ -292,17 +292,9 @@ SOCIAL_PASSWORD_RESET_POLICY = env('AZURE_B2C_PASS_RESET_POLICY', default='B2C_1
 SOCIAL_AUTH_USER_MODEL = 'unicef_security.User'
 
 SOCIAL_AUTH_PIPELINE = (
-    'unicef_security.pipeline.social_details',
-    'social_core.pipeline.social_auth.social_uid',
-    'social_core.pipeline.social_auth.auth_allowed',
-    'social_core.pipeline.social_auth.social_user',
-    'social_core.pipeline.user.get_username',
-    'unicef_security.pipeline.get_username',
-    'social_core.pipeline.social_auth.associate_by_email',
-    'unicef_security.pipeline.create_unicef_user',
-    'social_core.pipeline.social_auth.associate_user',
-    'social_core.pipeline.social_auth.load_extra_data',
-    'social_core.pipeline.user.user_details',
+    'social_core.pipeline.social_auth.social_details',
+    'unicef_security.graph.get_unicef_user',
+    'unicef_security.graph.default_group',
 )
 
 USER_FIELDS = ['username', 'email', 'first_name', 'last_name']

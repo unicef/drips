@@ -11,7 +11,7 @@ urlpatterns = [
     path(r'drips/api-token-auth/', token_obtain_pair),
     path(r'drips/api-auth/', include('rest_framework.urls', namespace='rest_framework')),
     path(r'drips/social/unicef-logout/', UNICEFLogoutView.as_view()),
-    path(r'drips/social', include('social_django.urls', namespace='social')),
+    path(r'drips/social/', include('social_django.urls', namespace='social')),
     path(r'drips/api/', include('drips.api.urls', namespace='api')),
     path(r'drips/api/', include('sharepoint_rest_api.urls', namespace='sharepoint')),
     path(r'drips/accounts/', include('django.contrib.auth.urls')),
