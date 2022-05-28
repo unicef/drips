@@ -16,6 +16,7 @@ urlpatterns = [
     path(r'drips/api/', include('sharepoint_rest_api.urls', namespace='sharepoint')),
     path(r'drips/accounts/', include('django.contrib.auth.urls')),
     path(r'drips/manage/adminactions/', include('adminactions.urls')),
+    path(r'security/', include('unicef_security.urls')),
 ]
 
 if settings.DEBUG:  # pragma: no cover
