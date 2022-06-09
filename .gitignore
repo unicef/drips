@@ -20,5 +20,5 @@ coverage.xml
 .env
 .envrc
 .venv/
-**/static
+src/drips/static
 .DS_Store

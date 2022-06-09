@@ -37,10 +37,12 @@ elif [[ "$*" == "drips" ]];then
     django-admin init-setup --all --verbosity 2
 #    django-admin check --deploy
     django-admin db-isready --wait --timeout 300
-    echo "newrelic-admin run-program uwsgi --static-map ${STATIC_URL}=${STATIC_ROOT}"
-#    exec gosu drips uwsgi --static-map ${STATIC_URL}=${STATIC_ROOT}
-#    newrelic-admin run-program uwsgi --static-map ${STATIC_URL}=${STATIC_ROOT}
+#    echo "newrelic-admin run-program uwsgi --static-map ${STATIC_URL}=${STATIC_ROOT}"
+    echo "uwsgi test"
+#    gunicorn drips.config.wsgi -b 0.0.0.0:8000 -w 4 --max-requests 100 --timeout=3200 --log-level info
     uwsgi --static-map ${STATIC_URL}=${STATIC_ROOT}
+#    newrelic-admin run-program uwsgi --static-map ${STATIC_URL}=${STATIC_ROOT}
+#    exec gosu drips uwsgi --static-map ${STATIC_URL}=${STATIC_ROOT}
 else
     exec "$@"
 fi
