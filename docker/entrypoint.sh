@@ -36,7 +36,7 @@ elif [[ "$*" == "drips" ]];then
     django-admin db-isready --wait --timeout 60
     django-admin init-setup --all --verbosity 2
 #    django-admin check --deploy
-#    django-admin db-isready --wait --timeout 300
+    django-admin db-isready --wait --timeout 300
     echo "newrelic-admin run-program uwsgi --static-map ${STATIC_URL}=${STATIC_ROOT}"
 #    exec gosu drips uwsgi --static-map ${STATIC_URL}=${STATIC_ROOT}
 #    newrelic-admin run-program uwsgi --static-map ${STATIC_URL}=${STATIC_ROOT}
