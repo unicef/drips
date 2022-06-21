@@ -39,6 +39,7 @@ class DRIPSSharePointSearchSerializer(serializers.Serializer):
 
     h_a_c_t_transaction_no = DRIPSSearchSharePointField()
     documentuploaded_app = DRIPSSearchSharePointField()
+    uploaded_by = DRIPSSearchSharePointField()
 
     is_new = serializers.SerializerMethodField()
     download_url = serializers.SerializerMethodField()
