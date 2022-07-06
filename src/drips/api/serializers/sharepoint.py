@@ -30,11 +30,13 @@ class DRIPSSharePointSearchSerializer(serializers.Serializer):
 
     b_a_p_document_no = DRIPSSearchSharePointField()
     b_a_p_document_type = DRIPSSearchSharePointField()
+    program_document_description = DRIPSSearchSharePointField()
     attachment_type = DRIPSSearchSharePointField()
-    face_form_type = DRIPSSearchSharePointField()
     face_form_no = DRIPSSearchSharePointField()
-    responsible_person = DRIPSSearchSharePointField()
+    face_form_type = DRIPSSearchSharePointField()
+    f_a_c_e_form_description = DRIPSSearchSharePointField()
     f_a_c_e_form_date = DRIPSSearchSharePointField()
+    responsible_person = DRIPSSearchSharePointField()
     ho_o_approval = DRIPSSearchSharePointField()
 
     h_a_c_t_transaction_no = DRIPSSearchSharePointField()
