@@ -21,6 +21,7 @@ DATABASES = {'default': env.db(default='postgres://postgres:pass@db:5432/postgre
 INSTALLED_APPS = (
     'drips.apps.core',
     'drips.apps.report_metadata',
+    'drips.apps.cost_centers',
     'drips.web',
     'constance',
     'sharepoint_rest_api',

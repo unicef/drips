@@ -3,7 +3,8 @@ from django.contrib.auth import get_user_model
 from django_filters import rest_framework as filters
 from unicef_realm.models import BusinessArea
 
-from drips.apps.report_metadata.models import DRIPSMetadata
+from drips.apps.cost_centers.models import CostCenter
+from drips.apps.report_metadata.models import AutocompleteMetadata, DRIPSMetadata
 
 
 class UserFilter(filters.FilterSet):
@@ -33,4 +34,22 @@ class DRIPSMetadataFilter(filters.FilterSet):
         model = DRIPSMetadata
         fields = {
             'category': ['exact', 'in'],
+        }
+
+
+class AutocompleteMetadataFilter(filters.FilterSet):
+    class Meta:
+        model = AutocompleteMetadata
+        fields = {
+            'code': ['exact', 'in'],
+            'category': ['exact', 'in'],
+        }
+
+
+class CostCenterFilter(filters.FilterSet):
+    class Meta:
+        model = CostCenter
+        fields = {
+            'code': ['exact', 'in'],
+            'description': ['exact', 'in'],
         }

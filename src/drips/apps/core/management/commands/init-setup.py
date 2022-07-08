@@ -81,3 +81,4 @@ class Command(BaseCommand):
 
         if options['metadata'] or _all:
             call_command('loaddata', 'metadata.json')
+            call_command('loaddata', 'cost_centers.json')
