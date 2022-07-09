@@ -1,6 +1,14 @@
-from django.contrib import admin
+import logging
+
+from django.contrib import admin, messages
+
+from admin_extra_buttons.decorators import button
+from admin_extra_buttons.mixins import ExtraButtonsMixin
 
 from .models import BAPAutocompleteMetadata, DRIPSMetadata, IPAutocompleteMetadata
+from .tasks import load_bap_metadata, load_ip_metadata
+
+logger = logging.getLogger(__name__)
 
 
 @admin.register(DRIPSMetadata)
@@ -11,14 +19,42 @@ class DRIPSMetadataAdmin(admin.ModelAdmin):
 
 
 @admin.register(BAPAutocompleteMetadata)
-class BAPAutocompleteMetadataAdmin(admin.ModelAdmin):
+class BAPAutocompleteMetadataAdmin(ExtraButtonsMixin, admin.ModelAdmin):
     search_fields = ('category', )
     list_display = ('code', )
     list_filter = ('category', )
+
+    @button()
+    def sync(self, request):
+        try:
+            load_bap_metadata()
+        except BaseException as e:
+            logger.error(e)
+            self.message_user(request, str(e), messages.ERROR)
+
+    @button()
+    def truncate(self, request):
+        n = BAPAutocompleteMetadata.objects.count()
+        BAPAutocompleteMetadata.objects.all().delete()
+        self.message_user(request, str(f'Metadata {n} deleted'), messages.ERROR)
 
 
 @admin.register(IPAutocompleteMetadata)
-class IPAutocompleteMetadata(admin.ModelAdmin):
+class IPAutocompleteMetadata(ExtraButtonsMixin, admin.ModelAdmin):
     search_fields = ('category', )
     list_display = ('code', )
     list_filter = ('category', )
+
+    @button()
+    def sync(self, request):
+        try:
+            load_ip_metadata()
+        except BaseException as e:
+            logger.error(e)
+            self.message_user(request, str(e), messages.ERROR)
+
+    @button()
+    def truncate(self, request):
+        n = IPAutocompleteMetadata.objects.count()
+        IPAutocompleteMetadata.objects.all().delete()
+        self.message_user(request, str(f'Metadata {n} deleted'), messages.ERROR)

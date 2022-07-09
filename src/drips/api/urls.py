@@ -17,7 +17,7 @@ router.register(r'roles/users', UserViewSet)
 router.register(r'metadata', DRIPSMetadataViewSet, basename='metadata')
 router.register(r'ip-metadata', IPAutocompleteMetadataViewSet, basename='ip-auto')
 router.register(r'bap-metadata', BAPAutocompleteMetadataViewSet, basename='bap-auto')
-router.register(r'costcenter', CostCenterViewSet, basename='costcenter')
+router.register(r'costcenters', CostCenterViewSet, basename='costcenters')
 router.register(r'sharepoint/search', DRIPSSharepointSearchViewSet, basename='sharepoint-search')
 
 urlpatterns = [

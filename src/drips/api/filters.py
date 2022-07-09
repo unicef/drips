@@ -41,8 +41,8 @@ class AutocompleteMetadataFilter(filters.FilterSet):
     class Meta:
         model = AutocompleteMetadata
         fields = {
-            'code': ['exact', 'in'],
-            'category': ['exact', 'in'],
+            'code': ['exact', 'startswith'],
+            'category': ['exact', 'startswith'],
         }
 
 
@@ -50,6 +50,6 @@ class CostCenterFilter(filters.FilterSet):
     class Meta:
         model = CostCenter
         fields = {
-            'code': ['exact', 'in'],
-            'description': ['exact', 'in'],
+            'code': ['exact', 'in', 'icontains'],
+            'description': ['exact', 'in', 'icontains'],
         }
