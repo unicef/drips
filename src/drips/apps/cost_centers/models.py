@@ -7,7 +7,7 @@ from unicef_realm.models import BusinessArea
 
 class CostCenter(TimeStampedModel):
 
-    business_area = models.ForeignKey(BusinessArea, on_delete=models.CASCADE, null=True, blank=True)
+    business_area = models.ForeignKey(BusinessArea, on_delete=models.CASCADE)
     code = models.CharField(verbose_name=_("Code"), max_length=10)
     description = models.CharField(verbose_name=_("Description"), max_length=128)
 
