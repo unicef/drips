@@ -6,6 +6,8 @@ from django.contrib.auth.hashers import make_password
 from django.core.management import call_command
 from django.core.management.base import BaseCommand
 
+from unicef_realm.tasks import sync_business_area
+
 
 class Command(BaseCommand):
     help = ""
@@ -80,5 +82,6 @@ class Command(BaseCommand):
                 self.stdout.write(f"Superuser `{admin}` already exists`.")
 
         if options['metadata'] or _all:
+            sync_business_area()
             call_command('loaddata', 'metadata.json')
             call_command('loaddata', 'cost_centers.json')
