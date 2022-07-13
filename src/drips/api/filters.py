@@ -1,3 +1,4 @@
+import django_filters
 from django.contrib.auth import get_user_model
 
 from django_filters import rest_framework as filters
@@ -47,6 +48,8 @@ class AutocompleteMetadataFilter(filters.FilterSet):
 
 
 class CostCenterFilter(filters.FilterSet):
+    business_area_code = django_filters.CharFilter(field_name='business_area__code', lookup_expr='exact')
+
     class Meta:
         model = CostCenter
         fields = {
