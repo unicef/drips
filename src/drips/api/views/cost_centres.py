@@ -11,3 +11,4 @@ class CostCenterViewSet(GenericAbstractViewSetMixin, viewsets.ReadOnlyModelViewS
     serializer_class = CostCenterSerializer
     filterset_class = CostCenterFilter
     search_fields = ('description', 'code')
+    ordering = ('description')
