@@ -30,9 +30,14 @@ class DRIPSMetadata(TimeStampedModel):
 class AutocompleteMetadata(TimeStampedModel):
     BAP = 'bap'
     IP = 'ip'
+    RESPONSIBLE_PERSON = 'responsbile_person'
+    UPLOADED_BY = 'uploaded_by'
+
     AUTOCHOICES = (
         (BAP, 'BAP Document No'),
         (IP, 'IP No'),
+        (RESPONSIBLE_PERSON, 'Responsible Person'),
+        (UPLOADED_BY, 'Uploaded By'),
     )
 
     category = models.CharField(choices=AUTOCHOICES, verbose_name=_("Category"), max_length=128)
@@ -71,4 +76,32 @@ class IPAutocompleteMetadata(AutocompleteMetadata):
     class Meta(AutocompleteMetadata.Meta):
         verbose_name = _('IP Autocomplete Metadata')
         verbose_name_plural = _('IP Autocomplete Metadata')
+        proxy = True
+
+
+class ResponsiblePersonAutocompleteMetadataManager(models.Manager):
+    def get_queryset(self):
+        return super().get_queryset().filter(category=AutocompleteMetadata.RESPONSIBLE_PERSON)
+
+
+class ResponsiblePersonAutocompleteMetadata(AutocompleteMetadata):
+    objects = ResponsiblePersonAutocompleteMetadataManager()
+
+    class Meta(AutocompleteMetadata.Meta):
+        verbose_name = _('Responsible Person Autocomplete Metadata')
+        verbose_name_plural = _('Responsible Person Autocomplete Metadata')
+        proxy = True
+
+
+class UploadedByAutocompleteMetadataManager(models.Manager):
+    def get_queryset(self):
+        return super().get_queryset().filter(category=AutocompleteMetadata.UPLOADED_BY)
+
+
+class UploadedByAutocompleteMetadata(AutocompleteMetadata):
+    objects = UploadedByAutocompleteMetadataManager()
+
+    class Meta(AutocompleteMetadata.Meta):
+        verbose_name = _('Uploaded By Autocomplete Metadata')
+        verbose_name_plural = _('Uploaded By Autocomplete Metadata')
         proxy = True
