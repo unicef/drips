@@ -81,7 +81,10 @@ class Command(BaseCommand):
             else:  # pragma: no cover
                 self.stdout.write(f"Superuser `{admin}` already exists`.")
 
-        if options['metadata'] or _all:
-            sync_business_area()
-            call_command('loaddata', 'metadata.json')
-            call_command('loaddata', 'cost_centers.json')
+        try:
+            if options['metadata'] or _all:
+                sync_business_area()
+                call_command('loaddata', 'metadata.json')
+                call_command('loaddata', 'cost_centers.json')
+        except BaseException as e:
+            self.stdout.write(f"Error when loading metadata: {str(e)}`")
