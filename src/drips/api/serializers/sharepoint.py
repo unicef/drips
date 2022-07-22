@@ -28,8 +28,8 @@ class DRIPSSharePointSearchSerializer(serializers.Serializer):
     fund_reservation_no = DRIPSSearchSharePointField()
     funds_commitment_no = DRIPSSearchSharePointField()
 
-    b_a_p_document_no = DRIPSSearchSharePointField()
     b_a_p_document_type = DRIPSSearchSharePointField()
+    program_document_no = DRIPSSearchSharePointField()
     program_document_description = DRIPSSearchSharePointField()
     attachment_type = DRIPSSearchSharePointField()
     face_form_no = DRIPSSearchSharePointField()
