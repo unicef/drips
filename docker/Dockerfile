@@ -1,4 +1,4 @@
-ARG BASE_IMAGE=0.1
+ARG BASE_IMAGE=0.2
 
 FROM unicef/drips:${BASE_IMAGE}-base
 
