@@ -14,17 +14,19 @@ class UserViewSet(GenericAbstractViewSetMixin, viewsets.ModelViewSet):
     queryset = User.objects.all()
     serializer_class = UserSerializer
     filterset_class = UserFilter
-    search_fields = ('user__username', 'group__name')
+    search_fields = ("user__username", "group__name")
 
-    @action(detail=False, methods=['get'])
+    @action(detail=False, methods=["get"])
     def my_profile(self, request, *args, **kwargs):
         object = self.request.user
         serializer = UserSerializer(object)
         return Response(serializer.data)
 
     def get_permissions(self):
-        if self.action == 'my_profile':
-            return [IsAuthenticated(), ]
+        if self.action == "my_profile":
+            return [
+                IsAuthenticated(),
+            ]
         return super().get_permissions()
 
 
@@ -32,4 +34,4 @@ class BusinessAreaViewSet(GenericAbstractViewSetMixin, viewsets.ModelViewSet):
     queryset = BusinessArea.objects.all()
     serializer_class = BusinessAreaSerializer
     filterset_class = BusinessAreaFilter
-    search_fields = ('code', 'name', 'long_name')
+    search_fields = ("code", "name", "long_name")

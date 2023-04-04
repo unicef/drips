@@ -5,7 +5,7 @@ from drips.api.serializers.utils import getvalue
 
 
 class DRIPSSearchSharePointField(serializers.ReadOnlyField):
-    prefix = 'DRIPS'
+    prefix = "DRIPS"
 
     def get_attribute(self, instance):
         field_name = self.prefix + to_camel(self.source)
@@ -15,4 +15,4 @@ class DRIPSSearchSharePointField(serializers.ReadOnlyField):
 class DRIPSSearchMultiSharePointField(DRIPSSearchSharePointField):
     def get_attribute(self, instance):
         attrs = super().get_attribute(instance)
-        return attrs.split(';') if attrs else []
+        return attrs.split(";") if attrs else []

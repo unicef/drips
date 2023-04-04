@@ -4,16 +4,13 @@ import tempfile
 import pytest
 from rest_framework.test import APIClient
 
-from .factories import (
-    BusinessAreaFactory,
-    UserFactory,
-)
+from .factories import BusinessAreaFactory, UserFactory
 
 
 def pytest_configure(config):
     # enable this to remove deprecations
-    os.environ['CELERY_TASK_ALWAYS_EAGER'] = "1"
-    os.environ['STATIC_ROOT'] = tempfile.gettempdir()
+    os.environ["CELERY_TASK_ALWAYS_EAGER"] = "1"
+    os.environ["STATIC_ROOT"] = tempfile.gettempdir()
 
 
 # @pytest.fixture(scope='session')

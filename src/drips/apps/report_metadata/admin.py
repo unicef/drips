@@ -19,16 +19,16 @@ logger = logging.getLogger(__name__)
 
 @admin.register(DRIPSMetadata)
 class DRIPSMetadataAdmin(admin.ModelAdmin):
-    search_fields = ('description', 'code')
-    list_display = ('category', 'description')
-    list_filter = ('category', )
+    search_fields = ("description", "code")
+    list_display = ("category", "description")
+    list_filter = ("category",)
 
 
 @admin.register(BAPAutocompleteMetadata)
 class BAPAutocompleteMetadataAdmin(ExtraButtonsMixin, admin.ModelAdmin):
-    search_fields = ('category', )
-    list_display = ('code', )
-    list_filter = ('category', )
+    search_fields = ("category",)
+    list_display = ("code",)
+    list_filter = ("category",)
 
     @button()
     def sync(self, request):
@@ -42,14 +42,14 @@ class BAPAutocompleteMetadataAdmin(ExtraButtonsMixin, admin.ModelAdmin):
     def truncate(self, request):
         n = BAPAutocompleteMetadata.objects.count()
         BAPAutocompleteMetadata.objects.all().delete()
-        self.message_user(request, str(f'Metadata {n} deleted'), messages.ERROR)
+        self.message_user(request, str(f"Metadata {n} deleted"), messages.ERROR)
 
 
 @admin.register(IPAutocompleteMetadata)
 class IPAutocompleteMetadataAdmin(ExtraButtonsMixin, admin.ModelAdmin):
-    search_fields = ('category', )
-    list_display = ('code', )
-    list_filter = ('category', )
+    search_fields = ("category",)
+    list_display = ("code",)
+    list_filter = ("category",)
 
     @button()
     def sync(self, request):
@@ -63,14 +63,14 @@ class IPAutocompleteMetadataAdmin(ExtraButtonsMixin, admin.ModelAdmin):
     def truncate(self, request):
         n = IPAutocompleteMetadata.objects.count()
         IPAutocompleteMetadata.objects.all().delete()
-        self.message_user(request, str(f'Metadata {n} deleted'), messages.ERROR)
+        self.message_user(request, str(f"Metadata {n} deleted"), messages.ERROR)
 
 
 @admin.register(ResponsiblePersonAutocompleteMetadata)
 class ResponsiblePersonAutocompleteMetadataAdmin(ExtraButtonsMixin, admin.ModelAdmin):
-    search_fields = ('category', )
-    list_display = ('code', )
-    list_filter = ('category', )
+    search_fields = ("category",)
+    list_display = ("code",)
+    list_filter = ("category",)
 
     @button()
     def sync(self, request):
@@ -84,14 +84,14 @@ class ResponsiblePersonAutocompleteMetadataAdmin(ExtraButtonsMixin, admin.ModelA
     def truncate(self, request):
         n = ResponsiblePersonAutocompleteMetadata.objects.count()
         ResponsiblePersonAutocompleteMetadata.objects.all().delete()
-        self.message_user(request, str(f'Metadata {n} deleted'), messages.ERROR)
+        self.message_user(request, str(f"Metadata {n} deleted"), messages.ERROR)
 
 
 @admin.register(UploadedByAutocompleteMetadata)
 class UploadedByAutocompleteMetadataAdmin(ExtraButtonsMixin, admin.ModelAdmin):
-    search_fields = ('category', )
-    list_display = ('code', )
-    list_filter = ('category', )
+    search_fields = ("category",)
+    list_display = ("code",)
+    list_filter = ("category",)
 
     @button()
     def sync(self, request):
@@ -105,4 +105,4 @@ class UploadedByAutocompleteMetadataAdmin(ExtraButtonsMixin, admin.ModelAdmin):
     def truncate(self, request):
         n = UploadedByAutocompleteMetadata.objects.count()
         UploadedByAutocompleteMetadata.objects.all().delete()
-        self.message_user(request, str(f'Metadata {n} deleted'), messages.ERROR)
+        self.message_user(request, str(f"Metadata {n} deleted"), messages.ERROR)

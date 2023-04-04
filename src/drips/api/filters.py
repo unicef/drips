@@ -1,6 +1,6 @@
-import django_filters
 from django.contrib.auth import get_user_model
 
+import django_filters
 from django_filters import rest_framework as filters
 from unicef_realm.models import BusinessArea
 
@@ -9,32 +9,29 @@ from drips.apps.report_metadata.models import AutocompleteMetadata, DRIPSMetadat
 
 
 class UserFilter(filters.FilterSet):
-
     class Meta:
         model = get_user_model()
         fields = {
-            'username': ['exact', 'icontains'],
-            'last_name': ['exact', 'icontains'],
-            'first_name': ['exact', 'icontains'],
+            "username": ["exact", "icontains"],
+            "last_name": ["exact", "icontains"],
+            "first_name": ["exact", "icontains"],
         }
 
 
 class BusinessAreaFilter(filters.FilterSet):
-
     class Meta:
         model = BusinessArea
         fields = {
-            'region': ['exact', 'in'],
-            'country': ['exact', 'in'],
+            "region": ["exact", "in"],
+            "country": ["exact", "in"],
         }
 
 
 class DRIPSMetadataFilter(filters.FilterSet):
-
     class Meta:
         model = DRIPSMetadata
         fields = {
-            'category': ['exact', 'in'],
+            "category": ["exact", "in"],
         }
 
 
@@ -42,17 +39,17 @@ class AutocompleteMetadataFilter(filters.FilterSet):
     class Meta:
         model = AutocompleteMetadata
         fields = {
-            'code': ['exact', 'startswith'],
-            'category': ['exact', 'startswith'],
+            "code": ["exact", "startswith"],
+            "category": ["exact", "startswith"],
         }
 
 
 class CostCenterFilter(filters.FilterSet):
-    business_area_code = django_filters.CharFilter(field_name='business_area__code', lookup_expr='exact')
+    business_area_code = django_filters.CharFilter(field_name="business_area__code", lookup_expr="exact")
 
     class Meta:
         model = CostCenter
         fields = {
-            'code': ['exact', 'in', 'icontains'],
-            'description': ['exact', 'in', 'icontains'],
+            "code": ["exact", "in", "icontains"],
+            "description": ["exact", "in", "icontains"],
         }
