@@ -38,9 +38,9 @@ setup(
     classifiers=[
         'Operating System :: POSIX :: Linux',
         'Programming Language :: Python :: 3',
-        'Programming Language :: Python :: 3.9',
+        'Programming Language :: Python :: 3.11',
         'Framework :: Django',
-        'Framework :: Django :: 4.0',
+        'Framework :: Django :: 4.1',
         'Framework :: Flake8',
     ],
 )

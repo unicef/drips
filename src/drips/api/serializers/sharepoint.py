@@ -47,7 +47,7 @@ class DRIPSSharePointSearchSerializer(serializers.Serializer):
     download_url = serializers.SerializerMethodField()
 
     def get_is_new(self, obj):
-        modified = getvalue(obj, 'DRIPSModified')
+        modified = getvalue(obj, "DRIPSModified")
 
         if modified:
             try:
@@ -58,12 +58,12 @@ class DRIPSSharePointSearchSerializer(serializers.Serializer):
 
     def get_download_url(self, obj):
         try:
-            path = getvalue(obj, 'Path')
-            directories = path.split('/')
-            relative_url = reverse('sharepoint_rest_api:sharepoint-settings-files-download', kwargs={
-                'folder': directories[-2],
-                'filename': directories[-1]
-            })
-            return f'{settings.HOST}{relative_url}'
+            path = getvalue(obj, "Path")
+            directories = path.split("/")
+            relative_url = reverse(
+                "sharepoint_rest_api:sharepoint-settings-files-download",
+                kwargs={"folder": directories[-2], "filename": directories[-1]},
+            )
+            return f"{settings.HOST}{relative_url}"
         except BaseException:
             return None

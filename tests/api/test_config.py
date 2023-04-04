@@ -9,4 +9,4 @@ from tests.api_checker import LastModifiedRecorder
 @pytest.mark.django_db
 @contract(LastModifiedRecorder)
 def test_api_config(request, django_app):
-    return reverse('api:config-list')
+    return reverse("api:config-list")

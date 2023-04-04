@@ -25,7 +25,7 @@ elif [[ "$*" == "beat" ]];then
             --pidfile run/celerybeat.pid
 
 elif [[ "$*" == "w2" ]];then
-    django-admin db-isready --wait --timeout 60
+    django-admin db_isready --wait --timeout 60
 
 elif [[ "$*" == "drips" ]];then
     rm -f /var/drips/run/*
@@ -33,10 +33,10 @@ elif [[ "$*" == "drips" ]];then
     django-admin diffsettings --output unified
 #    django-admin makemigrations --check --dry-run
 
-    django-admin db-isready --wait --timeout 60
-    django-admin init-setup --all --verbosity 2
+    django-admin db_isready --wait --timeout 60
+    django-admin init_setup --all --verbosity 2
 #    django-admin check --deploy
-    django-admin db-isready --wait --timeout 300
+    django-admin db_isready --wait --timeout 300
 #    echo "newrelic-admin run-program uwsgi --static-map ${STATIC_URL}=${STATIC_ROOT}"
     echo "uwsgi test"
 #    gunicorn drips.config.wsgi -b 0.0.0.0:8000 -w 4 --max-requests 100 --timeout=3200 --log-level info

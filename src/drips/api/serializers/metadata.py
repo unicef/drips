@@ -6,10 +6,10 @@ from drips.apps.report_metadata.models import AutocompleteMetadata, DRIPSMetadat
 class DRIPSMetadataSerializer(serializers.ModelSerializer):
     class Meta:
         model = DRIPSMetadata
-        fields = ('category', 'code', 'description')
+        fields = ("category", "code", "description")
 
 
 class AutocompleteMetadataSerializer(serializers.ModelSerializer):
     class Meta:
         model = AutocompleteMetadata
-        fields = ('category', 'code')
+        fields = ("category", "code")

@@ -14,11 +14,8 @@ class ConfigAPIView(APIView):
 
         return Response(
             {
-                'tracker': {
-                    'site_tracker': settings.MATOMO_SITE_TRACKER,
-                    'site_id': settings.MATOMO_SITE_ID
-                },
-                'source_id': settings.DRIPS_SOURCE_ID
+                "tracker": {"site_tracker": settings.MATOMO_SITE_TRACKER, "site_id": settings.MATOMO_SITE_ID},
+                "source_id": settings.DRIPS_SOURCE_ID,
             },
-            status=status.HTTP_200_OK
+            status=status.HTTP_200_OK,
         )
