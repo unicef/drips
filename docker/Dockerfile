@@ -1,5 +1,4 @@
 ARG BASE_IMAGE=0.2
-
 FROM unicef/drips:${BASE_IMAGE}-base
 
 #ARG BUILD_DATE
