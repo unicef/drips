@@ -10,7 +10,7 @@ class UserSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = get_user_model()
-        fields = ('id', 'username', 'first_name', 'last_name', 'email', 'is_superuser')
+        fields = ("id", "username", "first_name", "last_name", "email", "is_superuser")
 
     def validate_email(self, value):
         if value != value.lower():
@@ -19,8 +19,8 @@ class UserSerializer(serializers.ModelSerializer):
 
 
 class BusinessAreaSerializer(serializers.ModelSerializer):
-    country = serializers.ReadOnlyField(source='country.name')
+    country = serializers.ReadOnlyField(source="country.name")
 
     class Meta:
         model = BusinessArea
-        fields = ('code', 'name', 'long_name', 'region', 'country')
+        fields = ("code", "name", "long_name", "region", "country")

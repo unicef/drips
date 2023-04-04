@@ -10,5 +10,5 @@ class CostCenterViewSet(GenericAbstractViewSetMixin, viewsets.ReadOnlyModelViewS
     queryset = CostCenter.objects.all()
     serializer_class = CostCenterSerializer
     filterset_class = CostCenterFilter
-    search_fields = ('description', 'code')
-    ordering = ('description')
+    search_fields = ("description", "code")
+    ordering = "description"

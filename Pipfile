@@ -4,6 +4,7 @@ url = "https://pypi.org/simple"
 verify_ssl = true
 
 [dev-packages]
+black = "*"
 coverage = "*"
 drf-api-checker = "*"
 factory-boy = "*"
@@ -14,6 +15,7 @@ ipython = "*"
 isort = "*"
 mock = "*"
 pdbpp = "*"
+pre_commit = "*"
 pytest = "*"
 pytest-coverage = "*"
 pytest-django = "*"
@@ -32,7 +34,7 @@ sync = "*"
 celery = "*"
 dj-database-url = "*"
 dj-static = "*"
-Django = "<4.1"  # need pg update
+Django = "*"
 django-adminactions = "*"
 django-admin-extra-buttons = "*"
 django-celery-beat = "*"
@@ -68,4 +70,4 @@ uwsgi = "*"
 django-picklefield = "*"
 
 [requires]
-python_version = "3.9"
+python_version = "3.11"
