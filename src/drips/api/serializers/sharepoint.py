@@ -8,7 +8,6 @@ from rest_framework.reverse import reverse
 from sharepoint_rest_api.serializers.fields import CapitalizeSearchSharePointField
 
 from drips.api.serializers.fields import DRIPSSearchSharePointField
-from drips.api.serializers.utils import getvalue
 
 
 class DRIPSSharePointSearchSerializer(serializers.Serializer):
@@ -47,7 +46,7 @@ class DRIPSSharePointSearchSerializer(serializers.Serializer):
     download_url = serializers.SerializerMethodField()
 
     def get_is_new(self, obj):
-        modified = getvalue(obj, "DRIPSModified")
+        modified = obj.get("DRIPSModified")
 
         if modified:
             try:
@@ -58,7 +57,7 @@ class DRIPSSharePointSearchSerializer(serializers.Serializer):
 
     def get_download_url(self, obj):
         try:
-            path = getvalue(obj, "Path")
+            path = obj.get("Path")
             directories = path.split("/")
             relative_url = reverse(
                 "sharepoint_rest_api:sharepoint-settings-files-download",
