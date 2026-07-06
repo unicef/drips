@@ -38,6 +38,35 @@ class TestInitSetupCommand:
         mock_django_call.assert_any_call("loaddata", "metadata.json")
         mock_django_call.assert_any_call("loaddata", "cost_centers.json")
 
+    @mock.patch("drips.apps.core.management.commands.init_setup.get_user_model")
+    @mock.patch.dict(os.environ, {"ADMIN_USERNAME": "admin", "ADMIN_PASSWORD": "testpass"})
+    @mock.patch("drips.apps.core.management.commands.init_setup.settings")
+    def test_users_option_no_debug(self, mock_settings, mock_get_user):
+        mock_settings.DEBUG = False
+        mock_user_model = mock.MagicMock()
+        mock_user_model.objects.get_or_create.return_value = (mock.MagicMock(), True)
+        mock_get_user.return_value = mock_user_model
+        call_command("init_setup", users=True, verbosity=0)
+        mock_user_model.objects.get_or_create.assert_called_once_with(
+            username="admin",
+            defaults=mock.ANY,
+        )
+
+    @mock.patch("drips.apps.core.management.commands.init_setup.get_user_model")
+    @mock.patch.dict(os.environ, {"ADMIN_USERNAME": "admin"})
+    @mock.patch("drips.apps.core.management.commands.init_setup.settings")
+    def test_users_option_no_debug_random_password(self, mock_settings, mock_get_user):
+        mock_settings.DEBUG = False
+        mock_user_model = mock.MagicMock()
+        mock_user_model.objects.make_random_password.return_value = "randompass"
+        mock_user_model.objects.get_or_create.return_value = (mock.MagicMock(), True)
+        mock_get_user.return_value = mock_user_model
+        call_command("init_setup", users=True, verbosity=0)
+        mock_user_model.objects.get_or_create.assert_called_once_with(
+            username="admin",
+            defaults=mock.ANY,
+        )
+
     @mock.patch("drips.apps.core.management.commands.init_setup.call_command")
     @mock.patch("drips.apps.core.management.commands.init_setup.sync_business_area")
     @mock.patch("drips.apps.core.management.commands.init_setup.settings")

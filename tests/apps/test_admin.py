@@ -73,6 +73,30 @@ class TestAdminSyncButtons:
         self._call_button(BAPAutocompleteMetadataAdmin, admin, request)
         mock_read_items.assert_called_once()
 
+    @mock.patch("sharepoint_rest_api.graph_client.GraphClient.read_list_items")
+    def test_ip_sync_button_handles_error(self, mock_read_items):
+        mock_read_items.side_effect = Exception("sync failed")
+        admin = IPAutocompleteMetadataAdmin(IPAutocompleteMetadata, mock.MagicMock())
+        request = _make_request()
+        self._call_button(IPAutocompleteMetadataAdmin, admin, request)
+        mock_read_items.assert_called_once()
+
+    @mock.patch("sharepoint_rest_api.graph_client.GraphClient.read_list_items")
+    def test_responsible_person_sync_button_handles_error(self, mock_read_items):
+        mock_read_items.side_effect = Exception("sync failed")
+        admin = ResponsiblePersonAutocompleteMetadataAdmin(ResponsiblePersonAutocompleteMetadata, mock.MagicMock())
+        request = _make_request()
+        self._call_button(ResponsiblePersonAutocompleteMetadataAdmin, admin, request)
+        mock_read_items.assert_called_once()
+
+    @mock.patch("sharepoint_rest_api.graph_client.GraphClient.read_list_items")
+    def test_uploaded_by_sync_button_handles_error(self, mock_read_items):
+        mock_read_items.side_effect = Exception("sync failed")
+        admin = UploadedByAutocompleteMetadataAdmin(UploadedByAutocompleteMetadata, mock.MagicMock())
+        request = _make_request()
+        self._call_button(UploadedByAutocompleteMetadataAdmin, admin, request)
+        mock_read_items.assert_called_once()
+
 
 @pytest.mark.django_db
 class TestAdminTruncateButtons:
