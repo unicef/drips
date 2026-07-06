@@ -52,8 +52,9 @@ class DRIPSSharePointSearchSerializer(serializers.Serializer):
             try:
                 day_difference = (datetime.now() - parse(modified, ignoretz=True)).days
                 return day_difference <= 3
-            except (TypeError, ValueError):
+            except TypeError, ValueError:
                 return False
+        return None
 
     def get_download_url(self, obj):
         try:
@@ -64,5 +65,5 @@ class DRIPSSharePointSearchSerializer(serializers.Serializer):
                 kwargs={"folder": directories[-2], "filename": directories[-1]},
             )
             return f"{settings.HOST}{relative_url}"
-        except BaseException:
+        except Exception:  # noqa: BLE001
             return None

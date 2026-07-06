@@ -11,6 +11,7 @@ def pytest_configure(config):
     # enable this to remove deprecations
     os.environ["CELERY_TASK_ALWAYS_EAGER"] = "1"
     os.environ["STATIC_ROOT"] = tempfile.gettempdir()
+    os.environ["SECRET_KEY"] = "test-secret-key"
 
 
 # @pytest.fixture(scope='session')
@@ -19,24 +20,24 @@ def pytest_configure(config):
 #         call_command('loaddata', 'notifications.json')
 
 
-@pytest.fixture()
+@pytest.fixture
 def client(user):
     client = APIClient()
     client.force_authenticate(user)
     return client
 
 
-@pytest.fixture()
+@pytest.fixture
 def user(request, db):
     return UserFactory()
 
 
-@pytest.fixture()
+@pytest.fixture
 def logged_user(client, user):
     client.force_authenticate(user)
     return user
 
 
-@pytest.fixture()
+@pytest.fixture
 def business_area():
     return BusinessAreaFactory()

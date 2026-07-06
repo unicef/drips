@@ -10,6 +10,7 @@ from .models import (
     DRIPSMetadata,
     IPAutocompleteMetadata,
     ResponsiblePersonAutocompleteMetadata,
+    SourceId,
     UploadedByAutocompleteMetadata,
 )
 from .tasks import load_bap_metadata, load_ip_metadata, load_responsible_person_metadata, load_uploaded_by_metadata
@@ -34,7 +35,7 @@ class BAPAutocompleteMetadataAdmin(ExtraButtonsMixin, admin.ModelAdmin):
     def sync(self, request):
         try:
             load_bap_metadata()
-        except BaseException as e:
+        except Exception as e:  # noqa: BLE001
             logger.error(e)
             self.message_user(request, str(e), messages.ERROR)
 
@@ -55,7 +56,7 @@ class IPAutocompleteMetadataAdmin(ExtraButtonsMixin, admin.ModelAdmin):
     def sync(self, request):
         try:
             load_ip_metadata()
-        except BaseException as e:
+        except Exception as e:  # noqa: BLE001
             logger.error(e)
             self.message_user(request, str(e), messages.ERROR)
 
@@ -76,7 +77,7 @@ class ResponsiblePersonAutocompleteMetadataAdmin(ExtraButtonsMixin, admin.ModelA
     def sync(self, request):
         try:
             load_responsible_person_metadata()
-        except BaseException as e:
+        except Exception as e:  # noqa: BLE001
             logger.error(e)
             self.message_user(request, str(e), messages.ERROR)
 
@@ -85,6 +86,12 @@ class ResponsiblePersonAutocompleteMetadataAdmin(ExtraButtonsMixin, admin.ModelA
         n = ResponsiblePersonAutocompleteMetadata.objects.count()
         ResponsiblePersonAutocompleteMetadata.objects.all().delete()
         self.message_user(request, str(f"Metadata {n} deleted"), messages.ERROR)
+
+
+@admin.register(SourceId)
+class SourceIdAdmin(admin.ModelAdmin):
+    search_fields = ("name", "source_id")
+    list_display = ("name", "source_id", "description")
 
 
 @admin.register(UploadedByAutocompleteMetadata)
@@ -97,7 +104,7 @@ class UploadedByAutocompleteMetadataAdmin(ExtraButtonsMixin, admin.ModelAdmin):
     def sync(self, request):
         try:
             load_uploaded_by_metadata()
-        except BaseException as e:
+        except Exception as e:  # noqa: BLE001
             logger.error(e)
             self.message_user(request, str(e), messages.ERROR)
 

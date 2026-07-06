@@ -35,7 +35,7 @@ class Command(BaseCommand):
         verbosity = options["verbosity"]
         migrate = options["migrate"]
         _all = options["all"]
-        ModelUser = get_user_model()
+        user_model = get_user_model()
         if options["collectstatic"] or _all:
             self.stdout.write("Run collectstatic")
             call_command("collectstatic", verbosity=verbosity - 1, interactive=False)
@@ -45,15 +45,14 @@ class Command(BaseCommand):
             call_command("migrate", verbosity=verbosity - 1)
 
         if options["users"] or _all:
-            # call_command('update_notifications', verbosity=verbosity - 1)
             if settings.DEBUG:
-                pwd = "123"
+                pwd = "123"  # noqa: S105
                 admin = os.environ.get("USER", "admin")
             else:
-                pwd = os.environ.get("ADMIN_PASSWORD", ModelUser.objects.make_random_password())
+                pwd = os.environ.get("ADMIN_PASSWORD", user_model.objects.make_random_password())
                 admin = os.environ.get("ADMIN_USERNAME", "admin")
 
-            _, created = ModelUser.objects.get_or_create(
+            _, created = user_model.objects.get_or_create(
                 username=admin, defaults={"is_superuser": True, "is_staff": True, "password": make_password(pwd)}
             )
 
@@ -67,5 +66,5 @@ class Command(BaseCommand):
                 sync_business_area()
                 call_command("loaddata", "metadata.json")
                 call_command("loaddata", "cost_centers.json")
-        except BaseException as e:
+        except Exception as e:  # noqa: BLE001
             self.stdout.write(f"Error when loading metadata: {str(e)}`")

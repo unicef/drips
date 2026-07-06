@@ -170,7 +170,7 @@ LOGGING = {
     },
 }
 
-AUTH_USER_MODEL = "unicef_security.User"
+AUTH_USER_MODEL = "core.User"
 
 HOST = env("HOST", default="http://localhost:8000")
 
@@ -270,7 +270,7 @@ SOCIAL_AUTH_SANITIZE_REDIRECTS = False
 SOCIAL_AUTH_JSONFIELD_ENABLED = True
 POLICY = env("AZURE_B2C_POLICY_NAME", default="B2C_1A_UNICEF_SOCIAL_signup_signin")
 SOCIAL_PASSWORD_RESET_POLICY = env("AZURE_B2C_PASS_RESET_POLICY", default="B2C_1_PasswordResetPolicy")
-SOCIAL_AUTH_USER_MODEL = "unicef_security.User"
+SOCIAL_AUTH_USER_MODEL = "core.User"
 
 SOCIAL_AUTH_PIPELINE = (
     "social_core.pipeline.social_auth.social_details",

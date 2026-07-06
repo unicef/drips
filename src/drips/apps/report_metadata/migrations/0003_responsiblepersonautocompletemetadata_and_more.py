@@ -4,43 +4,49 @@ from django.db import migrations, models
 
 
 class Migration(migrations.Migration):
-
     dependencies = [
-        ('report_metadata', '0002_autocompletemetadata_bapautocompletemetadata_and_more'),
+        ("report_metadata", "0002_autocompletemetadata_bapautocompletemetadata_and_more"),
     ]
 
     operations = [
         migrations.CreateModel(
-            name='ResponsiblePersonAutocompleteMetadata',
-            fields=[
-            ],
+            name="ResponsiblePersonAutocompleteMetadata",
+            fields=[],
             options={
-                'verbose_name': 'Responsible Person Autocomplete Metadata',
-                'verbose_name_plural': 'Responsible Person Autocomplete Metadata',
-                'abstract': False,
-                'proxy': True,
-                'indexes': [],
-                'constraints': [],
+                "verbose_name": "Responsible Person Autocomplete Metadata",
+                "verbose_name_plural": "Responsible Person Autocomplete Metadata",
+                "abstract": False,
+                "proxy": True,
+                "indexes": [],
+                "constraints": [],
             },
-            bases=('report_metadata.autocompletemetadata',),
+            bases=("report_metadata.autocompletemetadata",),
         ),
         migrations.CreateModel(
-            name='UploadedByAutocompleteMetadata',
-            fields=[
-            ],
+            name="UploadedByAutocompleteMetadata",
+            fields=[],
             options={
-                'verbose_name': 'Uploaded By Autocomplete Metadata',
-                'verbose_name_plural': 'Uploaded By Autocomplete Metadata',
-                'abstract': False,
-                'proxy': True,
-                'indexes': [],
-                'constraints': [],
+                "verbose_name": "Uploaded By Autocomplete Metadata",
+                "verbose_name_plural": "Uploaded By Autocomplete Metadata",
+                "abstract": False,
+                "proxy": True,
+                "indexes": [],
+                "constraints": [],
             },
-            bases=('report_metadata.autocompletemetadata',),
+            bases=("report_metadata.autocompletemetadata",),
         ),
         migrations.AlterField(
-            model_name='autocompletemetadata',
-            name='category',
-            field=models.CharField(choices=[('bap', 'BAP Document No'), ('ip', 'IP No'), ('responsbile_person', 'Responsible Person'), ('uploaded_by', 'Uploaded By')], max_length=128, verbose_name='Category'),
+            model_name="autocompletemetadata",
+            name="category",
+            field=models.CharField(
+                choices=[
+                    ("bap", "BAP Document No"),
+                    ("ip", "IP No"),
+                    ("responsbile_person", "Responsible Person"),
+                    ("uploaded_by", "Uploaded By"),
+                ],
+                max_length=128,
+                verbose_name="Category",
+            ),
         ),
     ]

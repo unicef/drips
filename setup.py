@@ -3,7 +3,6 @@ import ast
 import os.path
 import re
 import sys
-from codecs import open
 
 from setuptools import find_packages, setup
 
@@ -21,6 +20,9 @@ with open(init, "rb") as f:
 
 dependency_links = set()
 
+with open(os.path.join(ROOT, "README.rst")) as f:
+    long_description = f.read()
+
 setup(
     name=NAME,
     version=VERSION,
@@ -28,7 +30,7 @@ setup(
     author_email="drips@unicef.org",
     url="",
     description="",
-    long_description=open(os.path.join(ROOT, "README.rst")).read(),
+    long_description=long_description,
     package_dir={"": "src"},
     packages=find_packages("src"),
     zip_safe=False,

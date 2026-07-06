@@ -1,0 +1,28 @@
+dependencies: &dependencies
+  - 'uv.lock'
+  - 'pyproject.toml'
+
+python: &python
+  - added|modified: 'src/**'
+  - added|modified: 'tests/**'
+  - 'manage.py'
+
+changlog:
+  - added|modified: 'changes/**'
+  - 'CHANGELOG.md'
+
+mypy:
+  - *python
+  - 'mypy.ini'
+
+run_tests:
+  - *python
+  - *dependencies
+  - 'pytest.ini'
+
+migrations:
+  - added|modified: 'src/**/migrations/*'
+
+lint:
+  -  *python
+  - 'pyproject.toml'
