@@ -34,7 +34,7 @@ elif [[ "$*" == "drips" ]];then
 #    django-admin makemigrations --check --dry-run
 
     django-admin db_isready --wait --timeout 60
-    django-admin init_setup --all --verbosity 2
+    django-admin upgrade --all --verbosity 2
 #    django-admin check --deploy
     django-admin db_isready --wait --timeout 300
 #    echo "newrelic-admin run-program uwsgi --static-map ${STATIC_URL}=${STATIC_ROOT}"

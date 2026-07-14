@@ -1,0 +1,92 @@
+target-version = "py314"
+line-length = 120
+
+[format]
+indent-style = "space"
+quote-style = "double"
+line-ending = "auto"
+skip-magic-trailing-comma = false
+
+[lint]
+select = [
+  "A",
+  "B",
+  "BLE",
+  "C4",
+  "C90",
+  "COM",
+  "D",
+  "DJ",
+  "E",
+  "E4",
+  "E7",
+  "E9",
+  "ERA",
+  "F",
+  "FLY",
+  "FURB",
+  "I",
+  "ICN",
+  "ISC",
+  "N",
+  "PERF",
+  "PIE",
+  "PL",
+  "PT",
+  "Q",
+  "R",
+  "RET",
+  "S",
+  "SIM",
+  "T10",
+  "T20",
+  "TC",
+  "UP",
+  "W",
+  "YTT",
+]
+ignore = [
+  "ANN401",
+  "B904",
+  "COM812",
+  "D100",
+  "D101",
+  "D102",
+  "D103",
+  "D104",
+  "D105",
+  "D106",
+  "D107",
+  "D203",
+  "D213",
+  "DJ001",
+  "E731",
+  "I001",
+  "ISC001",
+  "PLR2004",
+  "RUF005",
+  "RUF012",
+  "SIM108",
+  "UP031",
+  "UP035",
+  "UP037",
+]
+
+[lint.per-file-ignores]
+"src/**/migrations/**.py" = ["E501", "ERA001"]
+"src/drips/config/settings.py" = ["ERA001", "S104", "S108"]
+"src/drips/config/wsgi.py" = ["ERA001"]
+"src/sharepoint_sync/**" = ["ERA001"]
+"tests/**.py" = [
+  "ANN",
+  "D",
+  "ERA001",
+  "N999",
+  "PLC0415",
+  "PLR0913",
+  "PLR2004",
+  "S",
+  "S101",
+  "SIM117",
+  "UP",
+]

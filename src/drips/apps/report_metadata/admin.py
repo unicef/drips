@@ -34,7 +34,7 @@ class BAPAutocompleteMetadataAdmin(ExtraButtonsMixin, admin.ModelAdmin):
     def sync(self, request):
         try:
             load_bap_metadata()
-        except BaseException as e:
+        except Exception as e:  # noqa: BLE001
             logger.error(e)
             self.message_user(request, str(e), messages.ERROR)
 
@@ -55,7 +55,7 @@ class IPAutocompleteMetadataAdmin(ExtraButtonsMixin, admin.ModelAdmin):
     def sync(self, request):
         try:
             load_ip_metadata()
-        except BaseException as e:
+        except Exception as e:  # noqa: BLE001
             logger.error(e)
             self.message_user(request, str(e), messages.ERROR)
 
@@ -76,7 +76,7 @@ class ResponsiblePersonAutocompleteMetadataAdmin(ExtraButtonsMixin, admin.ModelA
     def sync(self, request):
         try:
             load_responsible_person_metadata()
-        except BaseException as e:
+        except Exception as e:  # noqa: BLE001
             logger.error(e)
             self.message_user(request, str(e), messages.ERROR)
 
@@ -97,7 +97,7 @@ class UploadedByAutocompleteMetadataAdmin(ExtraButtonsMixin, admin.ModelAdmin):
     def sync(self, request):
         try:
             load_uploaded_by_metadata()
-        except BaseException as e:
+        except Exception as e:  # noqa: BLE001
             logger.error(e)
             self.message_user(request, str(e), messages.ERROR)
 

@@ -5,7 +5,7 @@
         "Vary": "Accept, Origin",
         "Allow": "GET",
         "X-Frame-Options": "DENY",
-        "Content-Length": "130",
+        "Content-Length": "96",
         "X-Content-Type-Options": "nosniff",
         "Referrer-Policy": "same-origin"
     },
@@ -14,7 +14,7 @@
             "site_tracker": "https://unisitetracker.unicef.io/",
             "site_id": null
         },
-        "source_id": "51b10aef-9d0e-452b-8588-6a899a25c251"
+        "source_id": null
     },
     "content_type": "application/json"
 }
