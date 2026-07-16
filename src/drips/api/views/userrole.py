@@ -3,11 +3,11 @@ from rest_framework.decorators import action
 from rest_framework.permissions import IsAuthenticated
 from rest_framework.response import Response
 from unicef_realm.models import BusinessArea
-from unicef_security.models import User
 
 from drips.api.filters import BusinessAreaFilter, UserFilter
 from drips.api.serializers.userrole import BusinessAreaSerializer, UserSerializer
 from drips.api.views.base import GenericAbstractViewSetMixin
+from drips.apps.core.models import User
 
 
 class UserViewSet(GenericAbstractViewSetMixin, viewsets.ModelViewSet):
@@ -18,8 +18,8 @@ class UserViewSet(GenericAbstractViewSetMixin, viewsets.ModelViewSet):
 
     @action(detail=False, methods=["get"])
     def my_profile(self, request, *args, **kwargs):
-        object = self.request.user
-        serializer = UserSerializer(object)
+        user_obj = self.request.user
+        serializer = UserSerializer(user_obj)
         return Response(serializer.data)
 
     def get_permissions(self):

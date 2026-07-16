@@ -1,5 +1,4 @@
-"""
-WSGI config for pcatracking_django project.
+"""WSGI config for pcatracking_django project.
 
 This module contains the WSGI application used by Django's development server
 and any production WSGI deployments. It should expose a module-level variable
@@ -13,6 +12,7 @@ middleware here, or combine a Django application with an application of another
 framework.
 
 """
+
 import os
 from os.path import abspath, dirname
 from sys import path

@@ -5,17 +5,18 @@ import django.db.models.deletion
 
 
 class Migration(migrations.Migration):
-
     dependencies = [
-        ('unicef_realm', '0001_initial'),
-        ('cost_centers', '0001_initial'),
+        ("unicef_realm", "0001_initial"),
+        ("cost_centers", "0001_initial"),
     ]
 
     operations = [
         migrations.AlterField(
-            model_name='costcenter',
-            name='business_area',
-            field=models.ForeignKey(default=0, on_delete=django.db.models.deletion.CASCADE, to='unicef_realm.businessarea'),
+            model_name="costcenter",
+            name="business_area",
+            field=models.ForeignKey(
+                default=0, on_delete=django.db.models.deletion.CASCADE, to="unicef_realm.businessarea"
+            ),
             preserve_default=False,
         ),
     ]

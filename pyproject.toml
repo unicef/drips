@@ -1,13 +1,86 @@
-[tool.black]
-line-length = 120
-exclude = '''
-/(
-    \.git
-  | \.tox
-  | \.venv
-  | _build
-  | build
-  | dist
-  | migrations
-)/
-'''
+[build-system]
+build-backend = "setuptools.build_meta"
+requires = [ "setuptools" ]
+
+[project]
+name = "drips"
+version = "0.2"
+description = "DRIPS - Donor Reporting Portal"
+readme = "README.rst"
+license = { text = "AGPL-3.0" }
+authors = [
+  { name = "UNICEF", email = "drips@unicef.org" },
+]
+requires-python = ">=3.14"
+classifiers = [
+  "Programming Language :: Python :: 3 :: Only",
+  "Programming Language :: Python :: 3.14",
+]
+dependencies = [
+  "celery",
+  "dj-database-url",
+  "dj-static",
+  "django~=6.0",
+  "django-admin-extra-buttons",
+  "django-adminactions",
+  "django-celery-beat",
+  "django-celery-email",
+  "django-celery-results",
+  "django-cors-headers",
+  "django-debug-toolbar",
+  "django-environ",
+  "django-extensions",
+  "django-filter",
+  "django-picklefield",
+  "django-redis",
+  "django-rest-framework-social-oauth2",
+  "djangorestframework",
+  "djangorestframework-csv",
+  "djangorestframework-recursive",
+  "djangorestframework-simplejwt",
+  "djangorestframework-xml",
+  "gunicorn",
+  "newrelic",
+  "psycopg2-binary",
+  "requests",
+  "sentry-sdk",
+  "sharepoint-rest-api",
+  "social-auth-app-django",
+  "social-auth-core<5",                  # pin because sso is now POST
+  "unicef-djangolib",
+  "unicef-notification",
+  "unicef-realm",
+  "unicef-security",
+  "unicef-vision",
+  "uwsgi",
+]
+
+[dependency-groups]
+dev = [
+  "coverage",
+  "django-webtest",
+  "drf-api-checker",
+  "factory-boy",
+  "freezegun",
+  "ipython",
+  "mock",
+  "pdbpp",
+  "pre-commit",
+  "pytest",
+  "pytest-coverage",
+  "pytest-django",
+  "pytest-echo",
+  "pytest-env",
+  "pytest-ignore-flaky",
+  "pytest-pythonpath",
+  "responses",
+  "ruff",
+  "sphinx",
+  "vcrpy",
+  "webtest",
+]
+
+[tool.setuptools]
+packages.find.where = [ "src" ]
+package-dir."" = "src"
+

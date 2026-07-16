@@ -1,8 +1,7 @@
 import logging
 
 from django_countries import countries
-from sharepoint_rest_api import config
-from sharepoint_rest_api.client import SharePointClient
+from sharepoint_rest_api.graph_client import GraphClient
 
 from drips.config.celery import app
 
@@ -14,12 +13,11 @@ c = dict(countries)
 
 
 def load_autometadata(folder, category):
-    client = SharePointClient(
-        url=f"{config.SHAREPOINT_TENANT}/{config.SHAREPOINT_SITE_TYPE}/{config.SHAREPOINT_SITE}", folder=folder
-    )
-    items = client.read_items()
+    client = GraphClient(folder=folder)
+    items = client.read_list_items(folder)
     for item in items:
-        title = item.properties["Title"]
+        fields = item.get("fields", {})
+        title = fields.get("Title")
         if title:
             AutocompleteMetadata.objects.get_or_create(code=title, category=category)
 

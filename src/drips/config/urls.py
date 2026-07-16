@@ -3,9 +3,11 @@ from django.conf.urls import include
 from django.contrib import admin
 from django.urls import path
 
+from drips.apps.core.views import health
 from rest_framework_simplejwt.views import token_obtain_pair
 
 urlpatterns = [
+    path(r"health/", health),
     path(r"drips/admin/", admin.site.urls),
     path(r"drips/api-token-auth/", token_obtain_pair),
     path(r"drips/api-auth/", include("rest_framework.urls", namespace="rest_framework")),

@@ -1,7 +1,7 @@
 {
     "get_user": {
         "master": {
-            "model": "unicef_security.user",
+            "model": "core.user",
             "pk": 1,
             "fields": {
                 "password": "password",
