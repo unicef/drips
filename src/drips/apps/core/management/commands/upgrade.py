@@ -7,7 +7,6 @@ from django.contrib.auth import get_user_model
 from django.contrib.auth.hashers import make_password
 from django.core.management import call_command
 from django.core.management.base import BaseCommand
-from django.db.migrations.exceptions import InconsistentMigrationHistory
 
 from unicef_realm.tasks import sync_business_area
 
@@ -45,7 +44,8 @@ class Command(BaseCommand):
 
         if migrate or _all:
             self.stdout.write("Run migrations")
-            call_command("migrate", verbosity=verbosity - 1)
+            call_command("migrate", "sharepoint", "0001_initial", fake=True, verbosity=verbosity)
+            call_command("migrate", verbosity=verbosity)
 
         if options["users"] or _all:
             if settings.DEBUG:
