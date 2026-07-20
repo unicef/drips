@@ -44,8 +44,10 @@ class Command(BaseCommand):
 
         if migrate or _all:
             self.stdout.write("Run migrations")
-            call_command("migrate", verbosity=verbosity - 1)
+            call_command("showmigrations", verbosity=verbosity)
+            call_command("migrate", verbosity=verbosity)
 
+        self.stdout.write("User management")
         if options["users"] or _all:
             if settings.DEBUG:
                 pwd = "123"  # noqa: S105
