@@ -17,7 +17,7 @@ class TestUpgradeCommand:
     @mock.patch("drips.apps.core.management.commands.upgrade.call_command")
     def test_migrate_option(self, mock_django_call):
         call_command("upgrade", migrate=True, verbosity=0)
-        mock_django_call.assert_any_call("migrate", verbosity=0)
+        mock_django_call.assert_any_call("migrate", verbosity=-1)
 
     @mock.patch.dict(os.environ, {"USER": "admin"})
     @mock.patch("drips.apps.core.management.commands.upgrade.settings")
@@ -73,7 +73,7 @@ class TestUpgradeCommand:
         mock_settings.DEBUG = True
         call_command("upgrade", all=True, verbosity=0)
         mock_django_call.assert_any_call("collectstatic", verbosity=-1, interactive=False)
-        mock_django_call.assert_any_call("migrate", verbosity=0)
+        mock_django_call.assert_any_call("migrate", verbosity=-1)
 
     @mock.patch("drips.apps.core.management.commands.upgrade.call_command")
     @mock.patch("drips.apps.core.management.commands.upgrade.sync_business_area")

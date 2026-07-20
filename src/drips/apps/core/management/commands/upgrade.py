@@ -44,8 +44,7 @@ class Command(BaseCommand):
 
         if migrate or _all:
             self.stdout.write("Run migrations")
-            call_command("migrate", "sharepoint", "0001_initial", fake=True, verbosity=verbosity)
-            call_command("migrate", verbosity=verbosity)
+            call_command("migrate", verbosity=verbosity - 1)
 
         if options["users"] or _all:
             if settings.DEBUG:
