@@ -45,15 +45,7 @@ class Command(BaseCommand):
 
         if migrate or _all:
             self.stdout.write("Run migrations")
-            try:
-                call_command("migrate", verbosity=verbosity - 1)
-            except InconsistentMigrationHistory:
-                self.stdout.write(
-                    "Migration history is inconsistent (admin applied before core). "
-                    "Faking core.0001_initial to resolve..."
-                )
-                call_command("migrate", "core", "0001_initial", fake=True, verbosity=verbosity - 1)
-                call_command("migrate", verbosity=verbosity - 1)
+            call_command("migrate", verbosity=verbosity - 1)
 
         if options["users"] or _all:
             if settings.DEBUG:
