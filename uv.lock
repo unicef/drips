@@ -968,14 +968,14 @@ wheels = [
 
 [[package]]
 name = "faker"
-version = "40.31.0"
+version = "40.32.0"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "tzdata", marker = "sys_platform == 'win32'" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/74/e1/adf05724d5838fa9fe2ada64bf390bbf37b77e3714189ae9f17a2c6d0470/faker-40.31.0.tar.gz", hash = "sha256:af163a937aec99dca5abaeb94dd5008c51c26c6e9af1a26c8db4b3c4e7ca4403", size = 2024136, upload-time = "2026-07-14T15:33:32.045Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/42/cd/bfa4f0a397c4d34f5b6c8e7ac02832f9be5679a1f0c9a7642f2338e85a4e/faker-40.32.0.tar.gz", hash = "sha256:78271bfa3a0e982f1b90e1345b2b8f4a04a132864e0372262074e60c2cddd4ef", size = 2024472, upload-time = "2026-07-20T21:40:12.278Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/e0/f5/e427b19d79e241a51ce6fcd69a47e7a9ca791a8bc3da00d91d5be05e1456/faker-40.31.0-py3-none-any.whl", hash = "sha256:bedc97c292a48a6a1bbe471a9076d7395a196421ede1cedde99d5719f6b91027", size = 2061930, upload-time = "2026-07-14T15:33:29.004Z" },
+    { url = "https://files.pythonhosted.org/packages/8a/d1/2df16a41d5e3521442ac8713d0488235d54bb81a09d4fd1159e6dd7f3a41/faker-40.32.0-py3-none-any.whl", hash = "sha256:2fd913ad02dabbea84d729937db68f9ca9773dce93cec45f1fd6fe0fd1b41840", size = 2062161, upload-time = "2026-07-20T21:40:10.436Z" },
 ]
 
 [[package]]
@@ -989,11 +989,11 @@ wheels = [
 
 [[package]]
 name = "filelock"
-version = "3.31.1"
+version = "3.31.2"
 source = { registry = "https://pypi.org/simple" }
-sdist = { url = "https://files.pythonhosted.org/packages/53/55/1e19b2b56a24a4b94624f7e819e1bb87fa6c5609dbaf621df3aa6568a761/filelock-3.31.1.tar.gz", hash = "sha256:9e0c4e88ebe90833c1beafd3a547ccbc0bf7f491cd3858c3ec7aed63efe02163", size = 196656, upload-time = "2026-07-20T03:14:32.414Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/99/2c/c603f8aedff281295f7afce455d5c05f33459c7bf684abb46228f844a1f0/filelock-3.31.2.tar.gz", hash = "sha256:e6d35965c709527915a184837a8421826d18bc3f9d7e9a5a0c8114a782475d66", size = 200476, upload-time = "2026-07-21T04:04:46.471Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/88/61/df1d9db18f188d0ae648956a1decadc0e3b77d0571474370fd01f28a82b1/filelock-3.31.1-py3-none-any.whl", hash = "sha256:9ea33146c780161bf67cb20c7cb26b651566820d65ad8dfdd79422602a2dcfc0", size = 97189, upload-time = "2026-07-20T03:14:31.307Z" },
+    { url = "https://files.pythonhosted.org/packages/29/4c/c0ec6b645dcfefdd158313edb68c676d36c3f93ce8d2d9f0725d6341e506/filelock-3.31.2-py3-none-any.whl", hash = "sha256:18a4179901809ad1905c6631d907f1c3a41806c0d3506f7f9862565576a81a16", size = 97486, upload-time = "2026-07-21T04:04:44.903Z" },
 ]
 
 [[package]]
@@ -1794,7 +1794,7 @@ wheels = [
 
 [[package]]
 name = "sharepoint-rest-api"
-version = "0.21.9"
+version = "0.22.0"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "django" },
@@ -1804,9 +1804,9 @@ dependencies = [
     { name = "msal" },
     { name = "office365-rest-python-client" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/39/14/976e6a3e3918fb87cc47942880dcf5604cb57a7fcb0bfb46bc9b704e7b4e/sharepoint_rest_api-0.21.9.tar.gz", hash = "sha256:22339a615ca20be321aa46b5dd8877e7f9e184d80474fe5a0b88bd8f24b7bbc1", size = 22867, upload-time = "2026-07-16T11:28:29.888Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/fb/2c/791af88c48ec0c0466d82bed0bb7cd9d0af2c6c20b57e4c8aa8805b88864/sharepoint_rest_api-0.22.0.tar.gz", hash = "sha256:d6ad9cd80367f1f35d96d79c61ad719f8405d96c7ff6257be71b8e9ef7c48872", size = 23267, upload-time = "2026-07-21T09:09:09.159Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/0d/b0/32d7146a504d7e1727922317afef0e9d3ce1e6f060bae519d132c1191334/sharepoint_rest_api-0.21.9-py3-none-any.whl", hash = "sha256:94a83d57b09b7e0fafac030b51f44566e63e178c326ad19ecb970f1abf5aadc7", size = 33964, upload-time = "2026-07-16T11:28:28.574Z" },
+    { url = "https://files.pythonhosted.org/packages/c3/e7/666892a17975a5bac2faed8f20baf069e2530bdd4f4d0af59f5efc89cf7f/sharepoint_rest_api-0.22.0-py3-none-any.whl", hash = "sha256:51e7258211c35303b128eaa0b81bc21fcfb07a4abca282b27257433d2d22c7e4", size = 34753, upload-time = "2026-07-21T09:09:08.136Z" },
 ]
 
 [[package]]
