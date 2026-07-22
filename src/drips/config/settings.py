@@ -19,13 +19,13 @@ DEBUG = env.bool("DEBUG")
 DATABASES = {"default": env.db(default="postgres://postgres:pass@db:5432/postgres")}
 
 INSTALLED_APPS = (
+    "unicef_security",
     "drips.apps.core",
     "drips.apps.report_metadata",
     "drips.apps.cost_centers",
     "drips.web",
     "constance",
     "sharepoint_rest_api",
-    "unicef_security",
     "unicef_realm",
     "django.contrib.auth",
     "django.contrib.contenttypes",

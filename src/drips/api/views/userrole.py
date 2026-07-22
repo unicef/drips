@@ -31,7 +31,7 @@ class UserViewSet(GenericAbstractViewSetMixin, viewsets.ModelViewSet):
 
 
 class BusinessAreaViewSet(GenericAbstractViewSetMixin, viewsets.ModelViewSet):
-    queryset = BusinessArea.objects.all()
+    queryset = BusinessArea.objects.all().order_by("name")
     serializer_class = BusinessAreaSerializer
     filterset_class = BusinessAreaFilter
     search_fields = ("code", "name", "long_name")

@@ -13,6 +13,7 @@ class CostCenter(TimeStampedModel):
     class Meta:
         verbose_name = "CostCentre"
         verbose_name_plural = "CostCentres"
+        ordering = ("code",)
 
     def __str__(self):
         return f"{self.code} -{self.description}"
