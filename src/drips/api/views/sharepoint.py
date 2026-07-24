@@ -74,7 +74,7 @@ class DRIPSSharepointSearchViewSet(SearchResponseMixin, viewsets.GenericViewSet)
             existing = qp.get("search", "")
             qp["search"] = f"{search_kql} {existing}".strip() if existing else search_kql
         if "order_by" not in qp:
-            qp["order_by"] = default_filters.get("order_by", "modified desc")
+            qp["order_by"] = default_filters.get("order_by", "LastModifiedTime desc")
 
     def get_filters(self, kwargs):
         new_kwargs = {}
@@ -103,7 +103,8 @@ class DRIPSSharepointSearchViewSet(SearchResponseMixin, viewsets.GenericViewSet)
     def get_queryset(self):
         qp = self.request.query_params.dict()
         self._apply_source_id_filters(qp)
-        qp.setdefault("order_by", "modified desc")
+        qp.pop("source_id", None)
+        qp.setdefault("order_by", "LastModifiedTime desc")
         search = qp.pop("search", None)
         page = int(qp.pop("page", 1))
         order_by = qp.pop("order_by", None)
@@ -113,9 +114,11 @@ class DRIPSSharepointSearchViewSet(SearchResponseMixin, viewsets.GenericViewSet)
         for name, field in self.serializer_class._declared_fields.items():
             if isinstance(field, DRIPSSearchSharePointField):
                 camel_name = to_camel(name)
+                drips_name = "DRIPS" + camel_name
                 managed = PROPERTY_TO_MANAGED.get(camel_name)
                 if managed:
-                    reverse_map[managed] = "DRIPS" + camel_name
+                    reverse_map[managed] = drips_name
+                reverse_map[camel_name] = drips_name
 
         items, self.total_rows = self.client.search(
             search=search,
