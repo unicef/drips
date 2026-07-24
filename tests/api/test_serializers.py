@@ -73,10 +73,17 @@ class TestDRIPSSharePointSearchSerializer:
     @pytest.mark.django_db
     def test_get_download_url_returns_url(self):
         serializer = DRIPSSharePointSearchSerializer()
-        obj = {"Path": "https://sharepoint.com/site/dir/filename.pdf"}
+        obj = {
+            "Path": "https://unicef.sharepoint.com/sites/DFAM-DRIPS/2026_07_DRIPS/filename.pdf",
+            "DriveId": "b!abc123",
+            "DocId": "01ABCDEF",
+        }
         result = serializer.get_download_url(obj)
         assert result is not None
         assert "filename.pdf" in result
+        assert "2026_07_DRIPS" in result
+        assert "drive_id=b!abc123" in result
+        assert "item_id=01ABCDEF" in result
 
     @pytest.mark.django_db
     def test_get_download_url_returns_none_for_exception(self):

@@ -115,7 +115,7 @@ class TestSharepointSearchViewSet:
         response = client.get(url)
         assert response.status_code == status.HTTP_200_OK
         _name, args, kwargs = mock_search.mock_calls[0]
-        assert kwargs["order_by"] == "modified desc"
+        assert kwargs["order_by"] == "LastModifiedTime desc"
 
     @mock.patch("sharepoint_rest_api.graph_client.GraphClient.search")
     def test_search_with_non_drips_field(self, mock_search, client):

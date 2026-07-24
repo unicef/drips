@@ -13,6 +13,7 @@ from .views.metadata import (
     UploadedByAutocompleteMetadataViewSet,
 )
 from .views.sharepoint import DRIPSSharepointSearchViewSet
+from .views.graph_download import GraphFileDownloadViewSet
 from .views.userrole import BusinessAreaViewSet, UserViewSet
 
 app_name = "api"
@@ -27,6 +28,11 @@ router.register(r"responsible-person-metadata", ResponsiblePersonAutocompleteMet
 router.register(r"uploaded-by-metadata", UploadedByAutocompleteMetadataViewSet, basename="uploaded-by-auto")
 router.register(r"costcenters", CostCenterViewSet, basename="costcenters")
 router.register(r"sharepoint/search", DRIPSSharepointSearchViewSet, basename="sharepoint-search")
+router.register(
+    r"graph/(?P<folder>[\w\W]+)/files",
+    GraphFileDownloadViewSet,
+    basename="sharepoint-graph-files",
+)
 
 urlpatterns = [
     path("config/", view=ConfigAPIView.as_view(http_method_names=["get"]), name="config-list"),
