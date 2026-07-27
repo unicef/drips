@@ -66,7 +66,7 @@ class DRIPSSharePointSearchSerializer(serializers.Serializer):
         url_path = url_path.lstrip("/")
         site_prefix = f"{sp_config.SHAREPOINT_SITE_TYPE}/{sp_config.SHAREPOINT_SITE}/"
         if url_path.startswith(site_prefix):
-            return url_path[len(site_prefix):]
+            return url_path[len(site_prefix) :]
         segments = url_path.split("/")
         if len(segments) >= 3 and segments[0] == sp_config.SHAREPOINT_SITE_TYPE:
             return "/".join(segments[2:])
